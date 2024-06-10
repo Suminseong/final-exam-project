@@ -6,7 +6,7 @@
 body {
     box-sizing: border-box;
 /* 드래그 금지 - 필요할때 활성화 */
-/*     -webkit-user-select: none;
+/*  -webkit-user-select: none;
     -moz-user-select: none;
     -ms-use-select: none;
     user-select: none; */
