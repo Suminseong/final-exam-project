@@ -13,6 +13,6 @@ body {
 }
 
 /* 스크롤바 없애기 - 필요할때 활성화 */
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
-} */
+}
