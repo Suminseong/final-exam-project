@@ -9,6 +9,7 @@
 } */
 
 body {
+    overflow-x: hidden;
     box-sizing: border-box;
     background-color: #fffffe;
 /* 드래그 금지 - 필요할때 활성화 */
