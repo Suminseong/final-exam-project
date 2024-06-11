@@ -111,3 +111,52 @@ body {
     background-color: #1e1e1e;
     border-radius: 2px;
 }
+
+/* column content section setting */
+.content-section {
+    display: flex;
+    width: 100vw;
+}
+
+/* column section-1 */
+#section-1 {
+    height: calc(2040px * 0.8);
+    flex-direction: column;
+    align-items: center;
+}
+
+#section-1-logo {
+    display: flex;
+    background-image: url(img/wavepark-logo.png);
+    background-size: cover;
+    width: calc(320px * 0.9);
+    height: calc(80px * 0.8);
+}
+
+#section-1-text-black {
+    display: flex;
+    position: absolute;
+    font-size: 90px;
+    font-weight: 700;
+    color: #202020;
+    text-align: center;
+}
+
+#section-1-text-white {
+    display: flex;
+    position: absolute;
+    font-size: 90px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+}
+
+#section-1-img {
+    display: flex;
+    position: absolute;
+    background-image: url(img/section-1-img.png);
+    background-size: cover;
+    width: calc(1200px * 0.9);
+    height: calc(1400px * 0.8);
+    margin
+}
