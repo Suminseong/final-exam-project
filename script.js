@@ -2,10 +2,10 @@ window.addEventListener('scroll', function() {
     const scrollTop = window.scrollY;
 
     // 텍스트 요소의 초기 위치 (픽셀 단위)
-    const textBlackInitialTop = 640 * 0.35;
+    const textBlackInitialTop = 640 * 0.4;
     const textWhiteInitialTop = 640 * 0.7;
 
-    // 스크롤 속도 비율 (텍스트가 10% 더 빨리 스크롤되도록)
+    // 스크롤 속도 비율
     const textScrollFactor = 0.2;
 
     // 새로운 위치 계산
@@ -15,6 +15,7 @@ window.addEventListener('scroll', function() {
     // 텍스트 요소의 위치 업데이트
     document.getElementById('section-1-text-black').style.top = newTextBlackTop + 'px';
     document.getElementById('section-1-text-white').style.top = newTextWhiteTop + 'px';
+    document.getElementById('section-1-text-blend').style.top = newTextWhiteTop + 'px';
 
     // 스크롤 진행 바 업데이트
     const docuHeight = document.documentElement.scrollHeight;
