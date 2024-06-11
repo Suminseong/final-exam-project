@@ -7,8 +7,8 @@ window.addEventListener('scroll', function() {
     const scrollTop = window.scrollY;
 
     // 텍스트 요소의 초기 위치 (픽셀 단위)
-    const textBlackInitialTop = 640 * 0.4;
-    const textWhiteInitialTop = 640 * 0.7;
+    const textBlackInitialTop = 250;
+    const textWhiteInitialTop = 500;
 
     // 스크롤 속도 비율
     const textScrollFactor = 0.2;
@@ -51,6 +51,6 @@ window.addEventListener('scroll', function() {
     const viewportHeight = window.innerHeight;
     const scrollableHeight = docuHeight - viewportHeight;
     const scrollProgress = scrollTop / scrollableHeight;
-    const progressBarWidth = scrollProgress * 180;
+    const progressBarWidth = scrollProgress * 200;
     document.getElementById('scroll-progress-current').style.width = progressBarWidth + 'px';
 });

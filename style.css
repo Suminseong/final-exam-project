@@ -99,10 +99,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 90px;
-    height: calc(550px * 0.8);
-    margin-top: 72px;
-    margin-left: 90px;
+    width: 100px;
+    height: 450px;
+    margin-top: 90px;
+    margin-left: 100px;
     z-index: 10;
 }
 
@@ -110,13 +110,13 @@ body {
     display: flex;
     background-image: url(img/menu-bar.png);
     background-size: contain;
-    width: 90px;
-    height: 48px;
+    width: 100px;
+    height: 60px;
 }
 
 #left-text {
     display: flex;
-    width: 180px;
+    width: 200px;
     flex-direction: column;
     align-items: center;
     transform: rotate(-90deg);
@@ -124,14 +124,14 @@ body {
 }
 
 #left-text-top {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
 }
 
 #left-text-bottom {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 /* 우측 fixed */
@@ -142,10 +142,10 @@ body {
     align-items: center;
     justify-content: space-between;
     right: 0%;
-    margin-top: 36px;
-    margin-right: 25px;
-    width: 180px;
-    height: calc(595px * 0.8);
+    margin-top: 45px;
+    margin-right: 28px;
+    width: 200px;
+    height: 500px;
     z-index: 10;
 }
 
@@ -153,8 +153,8 @@ body {
     display: flex;
     background-image: url(img/logo.png);
     background-size: contain;
-    width: 180px;
-    height: 225px;
+    width: 200px;
+    height: 247px;
 }
 
 #scroll-bar {
@@ -172,7 +172,7 @@ body {
 
 #scroll-progress {
     display: flex;
-    width: 180px;
+    width: 200px;
     height: 3px;
     background-color: #d9d9d9;
     border-radius: 2px;
@@ -180,7 +180,7 @@ body {
 
 #scroll-progress-current {
     display: flex;
-    width: 10px; /* 스크롤 프로그레스 커런트 우선 10px로 해놓음 */
+    width: 0px; /* 스크롤 프로그레스 커런트 우선 10px로 해놓음 */
     height: 3px;
     background-color: #1e1e1e;
     border-radius: 2px;
@@ -194,7 +194,7 @@ body {
 
 /* column section-1 */
 #section-1 {
-    height: calc(2040px * 0.8);
+    height: 2040px;
     flex-direction: column;
     align-items: center;
 }
@@ -203,12 +203,13 @@ body {
     display: flex;
     background-image: url(img/wavepark-logo.png);
     background-size: contain;
-    width: calc(320px * 0.9);
-    height: calc(80px * 0.8);
+    width: 320px;
+    height: 80px;
+    margin-top: 80px;
 }
 #section-1-text-black, #section-1-text-white, #section-1-text-blend {
     position: absolute;
-    font-size: 80px;
+    font-size: 100px;
     font-weight: 900;
     text-align: center;
     white-space: nowrap;
@@ -216,20 +217,20 @@ body {
 
 #section-1-text-black {
     color: black;
-    top: calc(640px * 0.4);
+    top: 250px;
     z-index: 1;
 }
 
 #section-1-text-white {
     color: white;
-    top: calc(640px * 0.7);
+    top: 500px;
     z-index: 2;
     clip-path: polygon(0 0, 0% 100%, 100% 100%, 100% 0); 
 }
 
 #section-1-text-blend {
     color: black;
-    top: calc(640px * 0.7);
+    top: 500px;
     z-index: -1;
 }
 
@@ -237,9 +238,9 @@ body {
     position: absolute;
     background-image: url('img/section-1-img.png');
     background-size: contain;
-    width: calc(1200px * 0.8);
-    height: calc(1400px * 0.8);
-    top: calc(640px * 0.7);
+    width: 1200px;
+    height: 1400px;
+    top: 500px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
@@ -253,18 +254,18 @@ body {
 #section-2 {
     display: flex;
     position: relative;
-    height: calc(1800px * 0.8);
+    height: 1800px;
     align-items: end;
 }
 
 #section-2 h3 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 900;
     color: #505050;
 }
 
 #section-2 h2 {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 900;
     color: #000000;
 }
@@ -273,16 +274,16 @@ body {
     display: flex;
     background-image: url(img/section-2-img-1.png);
     background-size: contain;
-    width: calc(720px * 0.8);
-    height: calc(1000px * 0.8);
+    width: 720px;
+    height: 1000px;
 }
 
 #section-2-img-2 {
     display: flex;
     background-image: url(img/section-2-img-2.png);
     background-size: contain;
-    width: calc(840px * 0.8);
-    height: calc(640px * 0.8);
+    width: 840px;
+    height: 640px;
 }
 
 #section-2-part-1 {
@@ -290,22 +291,22 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    width: calc(840px * 0.8);
-    height: calc(1030px * 0.8);
+    width: 840px;
+    height: 1030px;
 }
 
 #section-2-text-1 {
     display: flex;
-    width: calc(400px * 0.8);
-    height: calc(230px * 0.8);
+    width: 400px;
+    height: 230px;
     flex-direction: column;
 }
 
 #section-2-text-1 p {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: #505050;
-    width: calc(400px * 0.9);
+    width: 400;
 }
 
 #section-2-text-1 h3 {
@@ -313,98 +314,98 @@ body {
 }
 
 #section-2-text-1 h2 {
-    margin-bottom: 36px;
+    margin-bottom: 40px;
 }
 
 #section-2-part-2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(720px * 0.8);
-    height: calc(1326px * 0.8);
-    margin-bottom: calc(154px * 0.8);
-    margin-left: calc(240px * 1.4125);
+    width: 720px;
+    height: 1326px;
+    margin-bottom: 154px;
+    margin-left: 225px;
 }
 
 #section-2-text-2 p {
     font-size: 18px;
     font-weight: 700;
     color: #505050;
-    width: calc(580px * 0.8);
-    margin-bottom: 36px;
+    width: 580px;
+    margin-bottom: 40px;
 }
 
 /* column section 3 */
 #section-3 {
     display: flex;
     position: absolute;
-    height: calc(2580px * 0.8);
+    height: 2580px;
 }
 
 #section-3 h4 {
     position: absolute;
-    font-size: 100px;
+    font-size: 120px;
     font-weight: 900;
     color: #000;
-    left: calc(360px * 0.8);
-    top: calc(440px * 0.8);
+    left: 360px;
+    top: 440px;
 }
 
 #section-3 p {
     position: absolute;
-    width: calc(360px * 0.9);
-    font-size: 18px;
+    width: 360px;
+    font-size: 20px;
     font-weight: 700;
     color: #505050;
-    left: calc(1080px * 0.8);
-    top: calc(510px * 0.8);
+    left: 1080px;
+    top: 510px;
 }
 
 #section-3 h5 {
     position: absolute;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     color: #202020;
-    left: calc(1080px * 0.8);
-    top: calc(610px * 0.85);
+    left: 1080px;
+    top: 610px;
 }
 
 #section-3 h6 {
-    font-size: 64px;
+    font-size: 80px;
     font-weight: 900;
     color: #202020;
 }
 
 #section-3-text-1 {
     position: absolute;
-    left: calc(364px * 0.8);
-    top: calc(889px * 0.9);
+    left: 364px;
+    top: 889px;
 }
 
 #section-3-text-2 {
     position: absolute;
-    left: calc(752px);
-    top: calc(1249px * 0.9);
+    left: 936px;
+    top: 1249px;
 }
 
 #section-3-text-3 {
     position: absolute;
-    left: calc(406px * 0.8);
-    top: calc(1609px * 0.9);
+    left: 406px;
+    top: 1609px;
 }
 
 #section-3-text-4 {
     position: absolute;
-    left: calc(800px * 0.8);
-    top: calc(1969px * 0.9);
+    left: 800px;
+    top: 1969px;
 }
 
 .section-3-img {
     display: flex;
     position: absolute;
     background-size: cover;
-    width: calc(720px * 0.8);
-    height: calc(500px * 0.9);
+    width: 720px;
+    height: 500px;
 }
 
 .section-3-text-img {
@@ -415,55 +416,55 @@ body {
 
 #section-3-img-1 {
     background-image: url(img/section-3-img-2.png);
-    left: calc(610px * 0.8);
-    top: calc(690px * 0.9);
+    left: 610px;
+    top: 690px;
 }
 
 #section-3-img-2 {
     background-image: url(img/section-3-img-1.png);
-    left: calc(136px * 0.85);
-    top: calc(1052px * 0.9);
+    left: 130px;
+    top: 1052px;
 }
 
 #section-3-img-3 {
     background-image: url(img/section-3-img-4.png);
-    left: calc(970px * 0.8);
-    top: calc(1412px * 0.9);
+    left: 970px;
+    top: 1412px;
 }
 
 #section-3-img-4 {
     background-image: url(img/section-3-img-3.png);
-    top: calc(1760px * 0.9);
+    top: 1760px;
 }
 
 #section-3-text-img-1 {
     background-image: url(img/section-3-text-img-1.png);
-    width: calc(265px * 0.8);
-    height: calc(353px * 0.8);
-    left: calc(856px * 0.825);
-    top: calc(460px * 0.8);
+    width: 265px;
+    height: 353px;
+    left: 856px;
+    top: 460px;
 }
 
 #section-3-text-img-2 {
     background-image: url(img/section-3-text-img-2.png);
-    width: calc(225px * 0.8);
-    height: calc(353px * 0.8);
-    left: calc(998px * 0.825);
-    top: calc(895px * 0.95);
+    width: 225px;
+    height: 353px;
+    left: 980px;
+    top: 895px;
 }
 
 #section-3-text-img-3 {
     background-image: url(img/section-3-text-img-3.png);
-    width: calc(338px * 0.8);
-    height: calc(353px * 0.8);
-    left: calc(659px * 0.825);
-    top: calc(1328px * 0.95);
+    width: 338px;
+    height: 353px;
+    left: 659px;
+    top: 1328px
 }
 
 #section-3-text-img-4 {
     background-image: url(img/section-3-text-img-4.png);
-    width: calc(331px * 0.8);
-    height: calc(353px * 0.8);
-    left: calc(967px * 0.825);
-    top: calc(1762px * 0.95);
+    width: 331px;
+    height: 353px;
+    left: 967px;
+    top: 1762px;
 }
