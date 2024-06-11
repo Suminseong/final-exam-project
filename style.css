@@ -3,16 +3,96 @@
     padding: 0;
 }
 
-body {
-    box-sizing: border-box;
-/* 드래그 금지 - 필요할때 활성화 */
-/*  -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-use-select: none;
-    user-select: none; */
-}
-
 /* 스크롤바 없애기 - 필요할때 활성화 */
 body::-webkit-scrollbar {
     display: none;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #fffffe;
+/* 드래그 금지 - 필요할때 활성화 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-use-select: none;
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 좌측 fixed */
+.aside-left {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+    height: 400px;
+    margin-top: 72px;
+    margin-left: 90px;
+}
+
+#menu {
+    display: flex;
+    background-image: url(img/menu-bar.png);
+    background-size: cover;
+    width: 90px;
+    height: 48px;
+}
+
+#left-text {
+    display: flex;
+    width: 180px;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(-90deg);
+    margin-right: 40px;
+}
+
+#left-text-top {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#left-text-bottom {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* 우측 fixed */
+
+.aside-right {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    right: 0%;
+    margin-top: 36px;
+    margin-right: 25px;
+}
+
+#logo {
+    display: flex;
+    background-image: url(img/logo.png);
+    background-size: cover;
+    width: 180px;
+    height: 225px;
+}
+
+#scroll-progress {
+    display: flex;
+    width: 180px;
+    height: 3px;
+    background-color: #d9d9d9;
+}
+
+/* 스크롤 프로그레스 커런트 우선 10px로 해놓음 */
+#scroll-progress-current {
+    display: flex;
+    width: 10px;
+    height: 3px;
+    background-color: #1e1e1e;
 }
