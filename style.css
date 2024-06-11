@@ -4,9 +4,9 @@
 }
 
 /* 스크롤바 없애기 - 필요할때 활성화 */
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none;
-}
+} */
 
 body {
     box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
     -ms-use-select: none;
     user-select: none;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
 }
 
 /* 좌측 fixed */
@@ -28,7 +28,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 90px;
-    height: 400px;
+    height: calc(550px * 0.8);
     margin-top: 72px;
     margin-left: 90px;
 }
@@ -62,7 +62,6 @@ body {
 }
 
 /* 우측 fixed */
-
 .aside-right {
     display: flex;
     position: fixed;
@@ -72,6 +71,8 @@ body {
     right: 0%;
     margin-top: 36px;
     margin-right: 25px;
+    width: 180px;
+    height: calc(595px * 0.8);
 }
 
 #logo {
@@ -82,17 +83,31 @@ body {
     height: 225px;
 }
 
+#scroll-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+}
+
+#scroll-bar p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
 #scroll-progress {
     display: flex;
     width: 180px;
     height: 3px;
     background-color: #d9d9d9;
+    border-radius: 2px;
 }
 
-/* 스크롤 프로그레스 커런트 우선 10px로 해놓음 */
 #scroll-progress-current {
     display: flex;
-    width: 10px;
+    width: 10px; /* 스크롤 프로그레스 커런트 우선 10px로 해놓음 */
     height: 3px;
     background-color: #1e1e1e;
+    border-radius: 2px;
 }
