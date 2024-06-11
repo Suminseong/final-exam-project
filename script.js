@@ -54,3 +54,46 @@ window.addEventListener('scroll', function() {
     const progressBarWidth = scrollProgress * 180;
     document.getElementById('scroll-progress-current').style.width = progressBarWidth + 'px';
 });
+
+// const horizontalScroll = document.getElementById('horizontal-scroll');
+//     const bottomMarker = document.getElementById('bottom-marker');
+//     let horizontalMode = false;
+
+//     function enableHorizontalScroll() {
+//       horizontalMode = true;
+//       document.body.style.overflowY = 'hidden';
+//       document.body.style.overflowX = 'auto';
+//     }
+
+//     function disableHorizontalScroll() {
+//       horizontalMode = false;
+//       document.body.style.overflowY = 'scroll';
+//       document.body.style.overflowX = 'hidden';
+//     }
+
+//     function handleScroll() {
+//       if (!horizontalMode) return;
+//       const scrollLeft = window.pageXOffset;
+//       const scrollWidth = document.documentElement.scrollWidth - window.innerWidth;
+
+//       if (scrollLeft >= scrollWidth) {
+//         // 수평 스크롤이 끝에 도달하면 다시 수직 스크롤로 전환
+//         disableHorizontalScroll();
+//       }
+//     }
+
+//     const observer = new IntersectionObserver(entries => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           enableHorizontalScroll();
+//         } else {
+//           disableHorizontalScroll();
+//         }
+//       });
+//     });
+
+//     observer.observe(bottomMarker);
+//     window.addEventListener('scroll', handleScroll);
+
+/*<div id="bottom-marker" style="height: 1px;"></div>를 html에 삽입하고, 
+이 친구를 스크롤 방향전환 시점의 바닥에 배치하면 스크롤 방향 전환이 가능하더라!*/ 
