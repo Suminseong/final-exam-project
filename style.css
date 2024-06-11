@@ -255,8 +255,6 @@ body {
     position: relative;
     height: calc(1800px * 0.8);
     align-items: end;
-    width: 75%;
-    margin:  auto;
 }
 
 #section-2 h3 {
