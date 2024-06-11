@@ -1,3 +1,8 @@
+window.addEventListener('load', function () {
+    document.getElementById('loading-screen').style.display = 'none';
+  });
+
+
 window.addEventListener('scroll', function() {
     const scrollTop = window.scrollY;
 
