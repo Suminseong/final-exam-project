@@ -12,7 +12,24 @@ html {
 
 body::-webkit-scrollbar {
     display: none;
-} 
+}
+
+/*debugging*/
+.row-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 5000px;
+    height: 100vh;
+    transform: translateY(100%);
+    background-color: aqua;
+}
+
+.row-content-cover {
+    position: relative;
+}
+
+/*debugging*/
 
 /*로딩화면*/
 
@@ -27,7 +44,8 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    z-index: 9999; /* 화면 최상단에 표시되도록 설정 */
+    z-index: 9999;
+    /* 화면 최상단에 표시되도록 설정 */
 }
 
 #loading-cover {
@@ -44,18 +62,22 @@ body::-webkit-scrollbar {
     background-color: #3498db;
     border-radius: 50%;
     animation: bounce 0.5s alternate infinite ease-in-out;
-    margin: 0 8px; /* 점 사이의 간격 조절 */
+    margin: 0 8px;
+    /* 점 사이의 간격 조절 */
 }
 
 .loading-dot:nth-child(2) {
     animation-delay: 0.2s;
 }
+
 .loading-dot:nth-child(3) {
     animation-delay: 0.4s;
 }
+
 .loading-dot:nth-child(4) {
     animation-delay: 0.6s;
 }
+
 .loading-dot:nth-child(5) {
     animation-delay: 0.8s;
 }
@@ -64,10 +86,12 @@ body::-webkit-scrollbar {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(2px);
     }
-    100%{
+
+    100% {
         transform: translateY(20px);
     }
 }
@@ -83,7 +107,7 @@ body {
     overflow-x: hidden;
     box-sizing: border-box;
     background-color: #fffffe;
-/* 드래그 금지 - 필요할때 활성화 */
+    /* 드래그 금지 - 필요할때 활성화 */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-use-select: none;
@@ -180,7 +204,8 @@ body {
 
 #scroll-progress-current {
     display: flex;
-    width: 0px; /* 스크롤 프로그레스 커런트 우선 10px로 해놓음 */
+    width: 0px;
+    /* 스크롤 프로그레스 커런트 우선 10px로 해놓음 */
     height: 3px;
     background-color: #1e1e1e;
     border-radius: 2px;
@@ -207,7 +232,10 @@ body {
     height: 80px;
     margin-top: 80px;
 }
-#section-1-text-black, #section-1-text-white, #section-1-text-blend {
+
+#section-1-text-black,
+#section-1-text-white,
+#section-1-text-blend {
     position: absolute;
     font-size: 100px;
     font-weight: 900;
@@ -225,7 +253,7 @@ body {
     color: white;
     top: 500px;
     z-index: 2;
-    clip-path: polygon(0 0, 0% 100%, 100% 100%, 100% 0); 
+    clip-path: polygon(0 0, 0% 100%, 100% 100%, 100% 0);
 }
 
 #section-1-text-blend {
@@ -340,7 +368,7 @@ body {
 /* column section 3 */
 #section-3 {
     display: flex;
-    position: absolute;
+    position: relative;
     height: 2580px;
 }
 
