@@ -26,6 +26,7 @@ body::-webkit-scrollbar {
 .row-content-cover {
     position: relative;
     display: flex;
+    height: 100vh;
     justify-content: left;
 }
 
