@@ -74,6 +74,33 @@ window.addEventListener('scroll', function () {
     const progressBarWidth = scrollProgress * 200;
     document.getElementById('scroll-progress-current').style.width = progressBarWidth + 'px';
 
+    //페이지 순차 이동
+    const horizonalContents = document.querySelector('.row-content');
+
     //바닥인식
-    
+    let horizonScroll = 0;
+    let preScrollTop = 0;
+    let nextScrollTop = window.scrollY;
+
+    if(scrollY > 6420){
+        horizonScroll = (scrollY - 6420)*3;
+        console.log(scrollY)
+        horizonalContents.style.transform = `translateX(-${horizonScroll}px)`;
+        horizonalContents.style.position = 'fixed';
+        horizonalContents.classList.add('.row-scroll-on')
+        horizonalContents.classList.remove('.row-scroll-off')
+        console.log(progressBarWidth)
+        if(progressBarWidth < 150) {
+            horizonalContents.style.position = ''
+            horizonalContents.classList.remove('.row-scroll-on')
+            horizonalContents.classList.add('.row-scroll-off')
+            horizonalContents.style.transform = `translateX(-${0}px)`;
+        }
+    }
+    else if(scrollY <= 6420 && preScrollTop > nextScrollTop) {
+        horizonalContents.style.transform = `translateX(-${0}px)`;
+        horizonalContents.classList.remove('.row-scroll-on')
+        horizonalContents.classList.add('.row-scroll-off')
+        console.log(horizonScroll)
+    }
 });

@@ -22,6 +22,16 @@ body::-webkit-scrollbar {
     transform: translateY(0);
 }
 
+.row-scroll-on{
+    position: fixed;
+    top: 0;
+}
+
+.row-scroll-off{
+    left: 0;
+    bottom: 0;
+}
+
 .row-content-cover {
     position: relative;
     display: flex;
