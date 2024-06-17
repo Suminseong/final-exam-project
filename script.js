@@ -4,6 +4,28 @@ window.addEventListener('load', function () {
 
 let totalScroll = 0;
 
+//스로틀링과 섹션단위 횡스크롤 기본정보
+
+let isThrottled = false;
+const sectionCount = document.querySelectorAll('.content-section-row-part').length;
+let currentSection = 0;
+
+function throttle(func, delay) {
+    if (isThrottled) return;
+    isThrottled = true;
+    setTimeout(() => {
+        func();
+        isThrottled = false;
+    }, delay);
+}
+
+function scrollToSection(index) {
+    const section = document.querySelector(`#section-row-part-${index + 1}`);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
 window.addEventListener('scroll', function () {
 
     let scrollTop = window.scrollY;
@@ -72,7 +94,6 @@ window.addEventListener('scroll', function () {
     const progressBarWidth = scrollProgress * 200;
     document.getElementById('scroll-progress-current').style.width = progressBarWidth + 'px';
 
-    //페이지 순차 이동
     const horizonalContents = document.querySelector('.row-content');
 
     //바닥인식
