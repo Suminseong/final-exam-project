@@ -16,7 +16,6 @@ body::-webkit-scrollbar {
 
 /*debugging*/
 .row-content {
-    position: absolute;
     left: 0;
     bottom: 0;
     height: 100vh;
@@ -33,9 +32,7 @@ body::-webkit-scrollbar {
 #bottom-marker {
     position: absolute;
     left: 0;
-    height: 100vh;
 }
-
 /*debugging*/
 
 /*로딩화면*/
