@@ -4,8 +4,6 @@ window.addEventListener('load', function () {
 
 let totalScroll = 0;
 
-
-
 window.addEventListener('scroll', function () {
 
     let scrollTop = window.scrollY;
@@ -79,28 +77,29 @@ window.addEventListener('scroll', function () {
 
     //바닥인식
     let horizonScroll = 0;
-    let preScrollTop = 0;
-    let nextScrollTop = window.scrollY;
 
-    if(scrollY > 6420){
-        horizonScroll = (scrollY - 6420)*3;
+    // 969에서 155 1329에서 150이 나오게 하는 식을 세워보니 −0.0139h+168.9583
+    vhCorrectionVal = (-0.0130 * viewportHeight) + 169.0583 ;
+
+    if (scrollY > 6420 && scrollY < 8120) {
+        horizonScroll = (scrollY - 6420) * 3;
         console.log(scrollY)
         horizonalContents.style.transform = `translateX(-${horizonScroll}px)`;
         horizonalContents.style.position = 'fixed';
         horizonalContents.classList.add('.row-scroll-on')
         horizonalContents.classList.remove('.row-scroll-off')
         console.log(progressBarWidth)
-        if(progressBarWidth < 150) {
+        if (progressBarWidth < vhCorrectionVal) {
             horizonalContents.style.position = ''
             horizonalContents.classList.remove('.row-scroll-on')
             horizonalContents.classList.add('.row-scroll-off')
             horizonalContents.style.transform = `translateX(-${0}px)`;
         }
     }
-    else if(scrollY <= 6420 && preScrollTop > nextScrollTop) {
-        horizonalContents.style.transform = `translateX(-${0}px)`;
+    else if (scrollY > 8120) {
+        horizonalContents.style.transform = `translateX(-${5100}px)`;
+        horizonalContents.style.position = ''
         horizonalContents.classList.remove('.row-scroll-on')
-        horizonalContents.classList.add('.row-scroll-off')
-        console.log(horizonScroll)
+        horizonalContents.classList.add('.row-scroll-off');
     }
 });
