@@ -1,11 +1,11 @@
 window.addEventListener('load', function () {
     document.getElementById('loading-screen').style.display = 'none';
-  });
+});
 
 
-window.addEventListener('scroll', function() {
-    const scrollTop = window.scrollY;
-
+window.addEventListener('scroll', function () {
+    let scrollTop = window.scrollY;
+    
     // 텍스트 요소의 초기 위치 (픽셀 단위)
     const textBlackInitialTop = 250;
     const textWhiteInitialTop = 500;
@@ -14,20 +14,19 @@ window.addEventListener('scroll', function() {
     const textScrollFactor = 0.2;
 
     // 새로운 위치 계산
-    const newTextBlackTop = textBlackInitialTop - (scrollTop * textScrollFactor);
-    const newTextWhiteTop = textWhiteInitialTop - (scrollTop * textScrollFactor);
+    const newTextBlackTop = textBlackInitialTop - (window.scrollY * textScrollFactor);
+    const newTextWhiteTop = textWhiteInitialTop - (window.scrollY * textScrollFactor);
 
     // 텍스트 요소의 위치 업데이트
     document.getElementById('section-1-text-black').style.top = newTextBlackTop + 'px';
     document.getElementById('section-1-text-white').style.top = newTextWhiteTop + 'px';
     document.getElementById('section-1-text-blend').style.top = newTextWhiteTop + 'px';
-
     document.getElementById('section-1-text-white').classList.add('show-white-text');
 
-    const img = document.getElementById('section-1-img');
+    const titleImg = document.getElementById('section-1-img');
     const textWhite = document.getElementById('section-1-text-white');
 
-    const imgRect = img.getBoundingClientRect();
+    const imgRect = titleImg.getBoundingClientRect();
     const textWhiteRect = textWhite.getBoundingClientRect();
 
     // 이미지와 텍스트가 겹치는 부분을 계산하여 clip-path 업데이트
@@ -46,13 +45,36 @@ window.addEventListener('scroll', function() {
         textWhite.style.clipPath = 'polygon(0 0, 0 100%, 100% 100%, 100% 0)';
     }
 
-    // 스크롤 진행 바 업데이트
-    const docuHeight = document.documentElement.scrollHeight;
-    const viewportHeight = window.innerHeight;
-    const scrollableHeight = docuHeight - viewportHeight;
-    const scrollProgress = scrollTop / scrollableHeight;
-    const progressBarWidth = scrollProgress * 200;
-    document.getElementById('scroll-progress-current').style.width = progressBarWidth + 'px';
+    //스크롤 비율에 의해 이미지 크기 업데이트
+    //이미지 div width, height 제어
+    const imgScaleFactor = 0.5;
+
+    const imageScaleX = 1200;
+    const imageScaleY = 1400;
+
+    let newImageScaleX = imageScaleX + (imgScaleFactor * window.scrollY);
+    let newImageScaleY = imageScaleY + (imgScaleFactor * window.scrollY);
+
+    if (this.window.scrollY > 800) {
+        let newImageScaleX = 1600;
+        let newImageScaleY = 1800;
+        titleImg.style.width = newImageScaleX + 'px';
+        titleImg.style.height = newImageScaleY + 'px';
+    }
+    else {
+        let newImageScaleX = imageScaleX + (imgScaleFactor * window.scrollY);
+        let newImageScaleY = imageScaleY + (imgScaleFactor * window.scrollY);
+        titleImg.style.width = newImageScaleX + 'px';
+        titleImg.style.height = newImageScaleY + 'px';
+    }
+
+     // 스크롤 진행 바 업데이트
+     const docuHeight = document.documentElement.scrollHeight;
+     const viewportHeight = window.innerHeight;
+     const scrollableHeight = docuHeight - viewportHeight;
+     const scrollProgress = scrollTop / scrollableHeight;
+     const progressBarWidth = scrollProgress * 200;
+     document.getElementById('scroll-progress-current').style.width = progressBarWidth + 'px';
 });
 
 // const horizontalScroll = document.getElementById('horizontal-scroll');
