@@ -27,6 +27,13 @@ body::-webkit-scrollbar {
 
 .row-content-cover {
     position: relative;
+    display: flex;
+    justify-content: left;
+}
+
+#bottom-marker {
+    position: absolute;
+    left: 0;
 }
 
 /*debugging*/

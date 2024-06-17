@@ -86,7 +86,7 @@ window.addEventListener('scroll', function () {
         function checkVisibility() {
             if (isInViewport(bottomMarker)) {
                 console.log('Bottom marker is in view!');
-                // 여기에 원하는 동작을 추가하세요.
+                document.querySelector('.row-content').style.left = scrollY + 'px';
             }
         }
     
@@ -95,8 +95,5 @@ window.addEventListener('scroll', function () {
     
         // 초기 로드 시 요소가 이미 보이는지 체크
         checkVisibility();
-    });
-    
+    }); 
 });
-
-
