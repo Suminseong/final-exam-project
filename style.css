@@ -19,10 +19,8 @@ body::-webkit-scrollbar {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 5000px;
     height: 100vh;
     transform: translateY(0);
-    background-image: url('/img/section-3-img-3.png');
 }
 
 .row-content-cover {
@@ -34,6 +32,7 @@ body::-webkit-scrollbar {
 #bottom-marker {
     position: absolute;
     left: 0;
+    height: 100vh;
 }
 
 /*debugging*/
@@ -131,7 +130,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100px;
-    height: 450px;
+    height: 400px;
     margin-top: 90px;
     margin-left: 100px;
     z-index: 10;
@@ -176,7 +175,7 @@ body {
     margin-top: 45px;
     margin-right: 28px;
     width: 200px;
-    height: 500px;
+    height: 450px;
     z-index: 10;
 }
 
@@ -505,3 +504,405 @@ body {
     left: 967px;
     top: 1762px;
 }
+
+/* row section */
+.content-section-row {
+    display: flex;
+    flex-direction: row;
+    width: 300vw;
+    height: 100vh;
+    background-color: #53AAE9;
+}
+
+.content-section-row-part {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* row part 1 */
+#section-row-part-1-img {
+    display: flex;
+    position: relative;
+    margin-left: 80px;
+    width: 62.5vw;
+    height: 85vh;
+    background-image: url(./img/section-4-img-1.png);
+    background-size: cover;
+}
+
+#section-row-part-1-img p {
+    display: flex;
+    position: absolute;
+    font-size: 40px;
+    width: 180px;
+    height: 120px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 8px;
+    line-height: 150%;
+    right: 33px;
+    bottom: 50px;
+}
+
+#section-row-part-1-img div {
+    display: flex;
+    position: absolute;
+    width: 180px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #fff;
+    right: 33px;
+    bottom: 40px;
+}
+
+#section-row-part-1 p {
+    display: flex;
+    position: absolute;
+}
+
+#section-row-part-1-title-1 {
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -8px;
+    color: #fff;
+    top: 15.1vh;
+    right: 258px;
+}
+
+#section-row-part-1-title-2 {
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -8px;
+    color: #fff;
+    top: 29.5vh;
+    right: 200px;
+}
+
+#section-row-part-1-txt-1 {
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+    top:49vh;
+    right: 240px;
+}
+
+#section-row-part-1-txt-2 {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    width: 354px;
+    height: 72px;
+    line-height: 150%;
+    bottom: 6.85vh;
+    right: 206px;
+}
+
+#section-row-part-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+#section-row-part-button p {
+    font-size: 28px;
+    font-weight: 700;
+    color: #53AAE9;
+}
+
+#section-row-part-1-button-div {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 800px;
+    height: 60px;
+    bottom: 30.5vh;
+    right: 40px;
+}
+
+#section-row-part-1-button-arrow-1, #section-row-part-1-button-arrow-2 {
+    display: flex;
+    align-items: center;
+}
+
+#section-row-part-1-button-arrow-1 #arrow {
+    /* 화살표 길이 수정 CSS */
+    width: 240px; 
+    }
+
+#section-row-part-1-button-arrow-2 #arrow {
+    /* 화살표 길이 수정 CSS */
+    width: 120px;
+    }
+
+/* 화살표 */
+#arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 0px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+}
+
+#circle {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-left: -4px;
+}
+
+#arrow-right {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    transform: rotate(135deg);
+}
+#arrow-right::before, #arrow-right::after {
+    content: '';
+    position: absolute;
+}
+#arrow-right::before {
+    width: 100%;
+    height: 100%;
+    border: 4px solid #fff;
+    border-right: 0;
+    border-bottom: 0;
+}
+#arrow-right::after {
+    width: 36px;
+    height: 2px;
+    background: #fff;
+    transform-origin: 0 100%;
+    transform: rotate(45deg);
+}
+
+
+/* row part 2 */
+#section-row-part-2-img {
+    display: flex;
+    position: absolute;
+    margin-left: 40px;
+    margin-bottom: 120px;
+    width: 46.9vw;
+    height: 103vh;
+    background-image: url(./img/section-4-img-2.png);
+    background-size: cover;
+}
+
+#section-row-part-2-title-1 {
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -8px;
+    color: #fff;
+    top: 22.2vh;
+    right: 664px;
+}
+
+#section-row-part-2-title-2 {
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -8px;
+    color: #fff;
+    top: 36.6vh;
+    right: 310px;
+}
+
+#section-row-part-2-txt-1 {
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+    top: 32.7vh;
+    right: 277px;
+}
+
+#section-row-part-2-txt-2 {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    width: 350px;
+    height: 72px;
+    line-height: 150%;
+    top: 14.8vh;
+    right: 330px;
+}
+
+#section-row-part-2 p {
+    display: flex;
+    position: absolute;
+}
+
+#section-row-part-2-txt-div{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 180px;
+    height: 130px;
+    bottom: 8.3vh;
+    right: 759px;
+}
+
+#section-row-part-2-txt-div p {
+    display: flex;
+    font-size: 40px;
+    width: 180px;
+    height: 120px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 8px;
+    line-height: 150%;
+}
+
+#section-row-part-2-txt-div div {
+    display: flex;
+    position: absolute;
+    width: 180px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #fff;
+    bottom: 0;
+}
+
+#section-row-part-2-button-div {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 1840px;
+    height: 60px;
+    bottom: 30.5vh;
+    left: 0;
+}
+
+#section-row-part-2-button-arrow-1, #section-row-part-2-button-arrow-2 {
+    display: flex;
+    align-items: center;
+}
+
+#section-row-part-2-button-arrow-1 #arrow {
+    /* 화살표 길이 수정 CSS */
+    width: 1280px; 
+    }
+
+#section-row-part-2-button-arrow-2 #arrow {
+    /* 화살표 길이 수정 CSS */
+    width: 120px;
+    }
+
+/* row secetion 3 */
+#section-row-part-3-img {
+    display: flex;
+    position: absolute;
+    width: 62.5vw;
+    height: 100vh;
+    background-image: url(./img/section-4-img-3.png);
+    background-size: cover;
+}
+
+#section-row-part-3-img p {
+    display: flex;
+    position: absolute;
+    font-size: 40px;
+    width: 180px;
+    height: 120px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 8px;
+    line-height: 150%;
+    left: 80px;
+    bottom: 90px;
+}
+
+#section-row-part-3-img div {
+    display: flex;
+    position: absolute;
+    width: 180px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #fff;
+    left: 80px;
+    bottom: 80px;
+}
+
+#section-row-part-3 p {
+    display: flex;
+    position: absolute;
+}
+
+#section-row-part-3-title-1 {
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -8px;
+    color: #fff;
+    top: 30vh;
+    right: 496px;
+}
+
+#section-row-part-3-title-2 {
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -8px;
+    color: #fff;
+    top: 44.4vh;
+    right: 404px;
+}
+
+#section-row-part-3-txt-1 {
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+    top: 55.9vh;
+    right: 240px;
+}
+
+#section-row-part-3-txt-2 {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    width: 326px;
+    height: 72px;
+    line-height: 150%;
+    top: 22.2vh;
+    right: 314px;
+}
+
+#section-row-part-3-txt-3 {
+    position: relative;
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 150%;
+    bottom: 7.4vh;
+    right: 40px;
+}
+
+#section-row-part-3-button-div {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 1680px;
+    height: 60px;
+    bottom: 30.5vh;
+    left: 40px;
+}
+
+#section-row-part-3-button-arrow-1 {
+    display: flex;
+    align-items: center;
+}
+
+#section-row-part-3-button-arrow-1 #arrow {
+    /* 화살표 길이 수정 CSS */
+    width: 1280px; 
+    }
