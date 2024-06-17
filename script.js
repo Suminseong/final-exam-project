@@ -44,44 +44,44 @@ window.addEventListener('scroll', function () {
     }
 
     //스크롤 전환 기능부
-    document.addEventListener('DOMContentLoaded', function() {
-        const bottomMarker = document.getElementById('bottom-marker');
-        const rowContent = document.querySelector('.row-content-cover');
-        let isHorizontalScroll = false;
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     const bottomMarker = document.getElementById('bottom-marker');
+    //     const rowContent = document.querySelector('.row-content-cover');
+    //     let isHorizontalScroll = false;
     
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top < window.innerHeight && rect.bottom >= 0
-            );
-        }
+    //     function isInViewport(element) {
+    //         const rect = element.getBoundingClientRect();
+    //         return (
+    //             rect.top < window.innerHeight && rect.bottom >= 0
+    //         );
+    //     }
     
-        function checkVisibility() {
-            if (isInViewport(bottomMarker) && !isHorizontalScroll) {
-                console.log('Bottom marker is in view!');
-                isHorizontalScroll = true;
-                document.body.style.overflowY = 'hidden'; // 수직 스크롤 비활성화
-                document.body.style.overflowX = 'auto'; // 수평 스크롤 활성화
-                rowContent.style.position = 'fixed';
-                rowContent.style.top = bottomMarker.getBoundingClientRect().top + 'px';
-                rowContent.style.left = '0px';
-                rowContent.style.height = '100%';
-                rowContent.style.whiteSpace = 'nowrap'; // 수평 스크롤 가능하도록 설정
-            } else if (!isInViewport(bottomMarker) && isHorizontalScroll) {
-                console.log('Bottom marker is out of view!');
-                isHorizontalScroll = false;
-                document.body.style.overflowY = 'auto'; // 수직 스크롤 활성화
-                document.body.style.overflowX = 'hidden'; // 수평 스크롤 비활성화
-                rowContent.style.position = 'static';
-            }
-        }
+    //     function checkVisibility() {
+    //         if (isInViewport(bottomMarker) && !isHorizontalScroll) {
+    //             console.log('Bottom marker is in view!');
+    //             isHorizontalScroll = true;
+    //             document.body.style.overflowY = 'hidden'; // 수직 스크롤 비활성화
+    //             document.body.style.overflowX = 'auto'; // 수평 스크롤 활성화
+    //             rowContent.style.position = 'fixed';
+    //             rowContent.style.top = bottomMarker.getBoundingClientRect().top + 'px';
+    //             rowContent.style.left = '0px';
+    //             rowContent.style.height = '100%';
+    //             rowContent.style.whiteSpace = 'nowrap'; // 수평 스크롤 가능하도록 설정
+    //         } else if (!isInViewport(bottomMarker) && isHorizontalScroll) {
+    //             console.log('Bottom marker is out of view!');
+    //             isHorizontalScroll = false;
+    //             document.body.style.overflowY = 'auto'; // 수직 스크롤 활성화
+    //             document.body.style.overflowX = 'hidden'; // 수평 스크롤 비활성화
+    //             rowContent.style.position = 'static';
+    //         }
+    //     }
     
-        window.addEventListener('scroll', checkVisibility);
-        window.addEventListener('resize', checkVisibility);
+    //     window.addEventListener('scroll', checkVisibility);
+    //     window.addEventListener('resize', checkVisibility);
     
-        // 초기 로드 시 요소가 이미 보이는지 체크
-        checkVisibility();
-    });
+    //     // 초기 로드 시 요소가 이미 보이는지 체크
+    //     checkVisibility();
+    // });
 
     // 스크롤 비율에 의해 이미지 크기 업데이트
     // 이미지 div width, height 제어
