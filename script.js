@@ -2,10 +2,8 @@ window.addEventListener('load', function () {
     document.getElementById('loading-screen').style.display = 'none';
 });
 
-
 window.addEventListener('scroll', function () {
     let scrollTop = window.scrollY;
-    
     // 텍스트 요소의 초기 위치 (픽셀 단위)
     const textBlackInitialTop = 250;
     const textWhiteInitialTop = 500;
@@ -14,8 +12,8 @@ window.addEventListener('scroll', function () {
     const textScrollFactor = 0.2;
 
     // 새로운 위치 계산
-    const newTextBlackTop = textBlackInitialTop - (window.scrollY * textScrollFactor);
-    const newTextWhiteTop = textWhiteInitialTop - (window.scrollY * textScrollFactor);
+    const newTextBlackTop = textBlackInitialTop - (scrollTop * textScrollFactor);
+    const newTextWhiteTop = textWhiteInitialTop - (scrollTop * textScrollFactor);
 
     // 텍스트 요소의 위치 업데이트
     document.getElementById('section-1-text-black').style.top = newTextBlackTop + 'px';
@@ -45,77 +43,60 @@ window.addEventListener('scroll', function () {
         textWhite.style.clipPath = 'polygon(0 0, 0 100%, 100% 100%, 100% 0)';
     }
 
-    //스크롤 비율에 의해 이미지 크기 업데이트
-    //이미지 div width, height 제어
+    // 스크롤 비율에 의해 이미지 크기 업데이트
+    // 이미지 div width, height 제어
     const imgScaleFactor = 0.5;
 
     const imageScaleX = 1200;
     const imageScaleY = 1400;
 
-    let newImageScaleX = imageScaleX + (imgScaleFactor * window.scrollY);
-    let newImageScaleY = imageScaleY + (imgScaleFactor * window.scrollY);
+    let newImageScaleX = imageScaleX + (imgScaleFactor * scrollTop);
+    let newImageScaleY = imageScaleY + (imgScaleFactor * scrollTop);
 
-    if (this.window.scrollY > 800) {
-        let newImageScaleX = 1600;
-        let newImageScaleY = 1800;
-        titleImg.style.width = newImageScaleX + 'px';
-        titleImg.style.height = newImageScaleY + 'px';
-    }
-    else {
-        let newImageScaleX = imageScaleX + (imgScaleFactor * window.scrollY);
-        let newImageScaleY = imageScaleY + (imgScaleFactor * window.scrollY);
-        titleImg.style.width = newImageScaleX + 'px';
-        titleImg.style.height = newImageScaleY + 'px';
+    if (scrollTop > 800) {
+        newImageScaleX = 1600;
+        newImageScaleY = 1800;
     }
 
-     // 스크롤 진행 바 업데이트
-     const docuHeight = document.documentElement.scrollHeight;
-     const viewportHeight = window.innerHeight;
-     const scrollableHeight = docuHeight - viewportHeight;
-     const scrollProgress = scrollTop / scrollableHeight;
-     const progressBarWidth = scrollProgress * 200;
-     document.getElementById('scroll-progress-current').style.width = progressBarWidth + 'px';
+    titleImg.style.width = newImageScaleX + 'px';
+    titleImg.style.height = newImageScaleY + 'px';
+
+    // 스크롤 진행 바 업데이트
+    const docuHeight = document.documentElement.scrollHeight;
+    const viewportHeight = window.innerHeight;
+    const scrollableHeight = docuHeight - viewportHeight;
+    const scrollProgress = scrollTop / scrollableHeight;
+    const progressBarWidth = scrollProgress * 200;
+    document.getElementById('scroll-progress-current').style.width = progressBarWidth + 'px';
+
+    //스크롤 바닥 도달 감지 및 방향 비틀기
+    document.addEventListener('DOMContentLoaded', function() {
+        const bottomMarker = document.getElementById('bottom-marker');
+    
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    
+        function checkVisibility() {
+            if (isInViewport(bottomMarker)) {
+                console.log('Bottom marker is in view!');
+                // 여기에 원하는 동작을 추가하세요.
+            }
+        }
+    
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('resize', checkVisibility);
+    
+        // 초기 로드 시 요소가 이미 보이는지 체크
+        checkVisibility();
+    });
+    
 });
 
-// const horizontalScroll = document.getElementById('horizontal-scroll');
-//     const bottomMarker = document.getElementById('bottom-marker');
-//     let horizontalMode = false;
 
-//     function enableHorizontalScroll() {
-//       horizontalMode = true;
-//       document.body.style.overflowY = 'hidden';
-//       document.body.style.overflowX = 'auto';
-//     }
-
-//     function disableHorizontalScroll() {
-//       horizontalMode = false;
-//       document.body.style.overflowY = 'scroll';
-//       document.body.style.overflowX = 'hidden';
-//     }
-
-//     function handleScroll() {
-//       if (!horizontalMode) return;
-//       const scrollLeft = window.pageXOffset;
-//       const scrollWidth = document.documentElement.scrollWidth - window.innerWidth;
-
-//       if (scrollLeft >= scrollWidth) {
-//         // 수평 스크롤이 끝에 도달하면 다시 수직 스크롤로 전환
-//         disableHorizontalScroll();
-//       }
-//     }
-
-//     const observer = new IntersectionObserver(entries => {
-//       entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//           enableHorizontalScroll();
-//         } else {
-//           disableHorizontalScroll();
-//         }
-//       });
-//     });
-
-//     observer.observe(bottomMarker);
-//     window.addEventListener('scroll', handleScroll);
-
-/*<div id="bottom-marker" style="height: 1px;"></div>를 html에 삽입하고, 
-이 친구를 스크롤 방향전환 시점의 바닥에 배치하면 스크롤 방향 전환이 가능하더라!*/ 
