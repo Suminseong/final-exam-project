@@ -131,7 +131,51 @@ body::-webkit-scrollbar {
 #nav-content-2 p {
     font-size: 80px;
     font-weight: 900;
+}
+
+.scroll-to-1 {
     color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-1:hover {
+    color: #c0d1dd;
+}
+
+.scroll-to-2 {
+    color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-2:hover {
+    color: #c0d1dd;
+}
+
+.scroll-to-3 {
+    color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-3:hover {
+    color: #c0d1dd;
+}
+
+.scroll-to-4 {
+    color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-4:hover {
+    color: #c0d1dd;
+}
+
+.scroll-to-5 {
+    color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-5:hover {
+    color: #c0d1dd;
 }
 
 #nav-content-2 p:hover{
