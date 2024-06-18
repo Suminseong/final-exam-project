@@ -7,7 +7,7 @@ let totalScroll = 0;
 //어사이드 메뉴버튼 구현
 const navButton = document.getElementById('menu');
 
-navButton.addEventListener('click', function(){
+navButton.addEventListener('click', function () {
     const navSection = document.getElementById('left-nav');
     navSection.classList.remove('hidden');
     navSection.classList.add('viewded');
@@ -15,6 +15,7 @@ navButton.addEventListener('click', function(){
 
 
 //스로틀링과 섹션단위 횡스크롤 기본정보
+const horizonalContents = document.querySelector('.row-content');
 let isThrottled = false;
 const sectionCount = document.querySelectorAll('.content-section-row-part').length;
 let currentSection = 0;
@@ -28,14 +29,17 @@ function throttle(func, delay) {
     }, delay);
 }
 
+
 function scrollToSection(index) {
     const section = document.querySelector(`#section-row-part-${index + 1}`);
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
     }
 }
+let isAnimating = false;
 
 window.addEventListener('scroll', function () {
+    if (isAnimating) return;
 
     let scrollTop = window.scrollY;
     // 텍스트 요소의 초기 위치 (픽셀 단위)
@@ -103,16 +107,14 @@ window.addEventListener('scroll', function () {
     const progressBarWidth = scrollProgress * 200;
     document.getElementById('scroll-progress-current').style.width = progressBarWidth + 'px';
 
-    const horizonalContents = document.querySelector('.row-content');
-
     //바닥인식
     let horizonScroll = 0;
 
     // 969에서 155 1329에서 150이 나오게 하는 식을 세워보니 −0.0139h+168.9583
-    vhCorrectionVal = (-0.0130 * viewportHeight) + 169.0583 - 32 ;
+    vhCorrectionVal = (-0.0130 * viewportHeight) + 169.0583 - 32;
 
     if (scrollTop > 6420 && scrollTop < 8120) {
-        horizonScroll = (scrollTop - 6420) * 3;
+        horizonScroll = (scrollTop - 6420) * 1;
         console.log(scrollTop)
         // horizonalContents.style.transform = `translateX(-${horizonScroll}px)`; //횡스크롤 단순 이동부
         horizonalContents.style.position = 'fixed';
@@ -121,63 +123,20 @@ window.addEventListener('scroll', function () {
         console.log(progressBarWidth);
         console.log(vhCorrectionVal)
         //new - 횡스크롤 이동 페이지 단위 전환
-        if (scrollTop > 6420 && scrollTop < 6886){
-            horizonalContents.style.transform = `translateX(-${0}vw)`;
-            horizonalContents.classList.add('show-part1')
-            horizonalContents.classList.remove('show-part2')
-            horizonalContents.classList.remove('show-part3')
-            if (scrollTop > 6780 && scrollTop < 6886) {
-                this.window.addEventListener('wheel', preventScroll, { passive: false });
-                setTimeout(() => {
-                    window.removeEventListener('wheel', preventScroll, { passive: false });
-                }, 750);
-
-                function preventScroll(e) {
-                    e.preventDefault();
-                }
-            }
+        if (scrollTop > 6420 && scrollTop < 6886) {
+            animateHorizontalScroll('show-part1', ['show-part2', 'show-part3']);
+            horizonalContents.style.transform = `translateX(-${0}vw)`
+            window.scrollTo(0, scrollTop);
         }
-        else if(scrollTop > 6886 && scrollTop < 7452){
-            horizonalContents.style.transform = `translateX(-${100}vw)`;
-            horizonalContents.classList.add('show-part2')
-            horizonalContents.classList.remove('show-part1')
-            horizonalContents.classList.remove('show-part3')
-            if (scrollTop > 6886 && scrollTop < 7000) {
-                this.window.addEventListener('wheel', preventScroll, { passive: false });
-                setTimeout(() => {
-                    window.removeEventListener('wheel', preventScroll, { passive: false });
-                }, 700);
-
-                function preventScroll(e) {
-                    e.preventDefault();
-                }
-            }
-            if (scrollTop > 7150 && scrollTop < 7252) {
-                this.window.addEventListener('wheel', preventScroll, { passive: false });
-                setTimeout(() => {
-                    window.removeEventListener('wheel', preventScroll, { passive: false });
-                }, 700);
-
-                function preventScroll(e) {
-                    e.preventDefault();
-                }
-            }
+        else if (scrollTop > 6886 && scrollTop < 7452) {
+            animateHorizontalScroll('show-part2', ['show-part1', 'show-part3']);
+            horizonalContents.style.transform = `translateX(-${100}vw)`
+            window.scrollTo(0, scrollTop);
         }
-        else if(scrollTop > 7452 && scrollTop < 8120){
-            horizonalContents.style.transform = `translateX(-${200}vw)`;
-            horizonalContents.classList.add('show-part3')
-            horizonalContents.classList.remove('show-part2')
-            horizonalContents.classList.remove('show-part1')
-            if (scrollTop > 8020 && scrollTop < 8070) {
-                this.window.addEventListener('wheel', preventScroll, { passive: false });
-                setTimeout(() => {
-                    window.removeEventListener('wheel', preventScroll, { passive: false });
-                }, 500);
-
-                function preventScroll(e) {
-                    e.preventDefault();
-                }
-            }
+        else if (scrollTop > 7452 && scrollTop < 8120) {
+            animateHorizontalScroll('show-part3', ['show-part1', 'show-part2']);
+            horizonalContents.style.transform = `translateX(-${200}vw)`
+            window.scrollTo(0, scrollTop);
         }
 
         if (progressBarWidth < vhCorrectionVal) { //횡스크롤에서 빠져나가기
@@ -186,7 +145,20 @@ window.addEventListener('scroll', function () {
         }
     }
     else if (scrollTop > 8120) {
-        horizonalContents.style.transform = `translateX(-${200}vw)`;
-        horizonalContents.style.position = '';
+        horizonalContents.style.transform = `translate(-${200}vw, -${100}vw)`;
     }
+    else if(scrollTop <6420) {
+        horizonalContents.style.transform = `translate(-${0}vw, ${100}vw)`;
+    }
+    
 });
+
+function animateHorizontalScroll(addClass, removeClasses) {
+    isAnimating = true;
+    horizonalContents.classList.add(addClass);
+    removeClasses.forEach(cls => horizonalContents.classList.remove(cls));
+
+    setTimeout(() => {
+        isAnimating = false;
+    }, 200); // match the duration of the CSS transition
+}
