@@ -209,15 +209,18 @@ body {
     width: 200px;
     height: 450px;
     z-index: 10;
+    z-index: 8888;
 }
 
 #logo {
     display: flex;
     background-image: url(img/logo.png);
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 200px;
-    height: 247px;
+    height: 184px;
 }
+
 
 #scroll-bar {
     display: flex;
