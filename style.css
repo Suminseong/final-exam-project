@@ -459,24 +459,28 @@ body {
     position: absolute;
     left: 364px;
     top: 889px;
+    z-index: 99991;
 }
 
 #section-3-text-2 {
     position: absolute;
     left: 936px;
     top: 1249px;
+    z-index: 99991;
 }
 
 #section-3-text-3 {
     position: absolute;
     left: 406px;
     top: 1609px;
+    z-index: 99991;
 }
 
 #section-3-text-4 {
     position: absolute;
     left: 800px;
     top: 1969px;
+    z-index: 99991;
 }
 
 .section-3-img {
@@ -493,27 +497,43 @@ body {
     background-size: cover;
 }
 
+.display-none {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.5s ease-in-out;
+}
+
+.display-block {
+    opacity: 0.8;
+    transform: translateY(0px);
+    transition: all 0.5s ease-in-out;
+}
+
 #section-3-img-1 {
     background-image: url(img/section-3-img-2.png);
     left: 610px;
     top: 690px;
+    z-index: 99991;
 }
 
 #section-3-img-2 {
     background-image: url(img/section-3-img-1.png);
     left: 130px;
     top: 1052px;
+    z-index: 99991;
 }
 
 #section-3-img-3 {
     background-image: url(img/section-3-img-4.png);
     left: 970px;
     top: 1412px;
+    z-index: 99991;
 }
 
 #section-3-img-4 {
     background-image: url(img/section-3-img-3.png);
     top: 1760px;
+    z-index: 99991;
 }
 
 #section-3-text-img-1 {
@@ -664,7 +684,7 @@ body {
 #section-row-part-1-button-div {
     display: flex;
     position: absolute;
-    justify-content: space-between;
+    justify-content: left;
     width: 800px;
     height: 60px;
     bottom: 30.5vh;
@@ -677,13 +697,13 @@ body {
 }
 
 #section-row-part-1-button-arrow-1 #arrow {
-    /* 화살표 길이 수정 CSS */
-    width: 240px; 
+    /* 화살표 길이 수정 CSS 결과 240 */
+    width: 60px; 
     }
 
 #section-row-part-1-button-arrow-2 #arrow {
-    /* 화살표 길이 수정 CSS */
-    width: 120px;
+    /* 화살표 길이 수정 CSS 결과 120 */
+    width: 60px;
     }
 
 /* 화살표 */
@@ -833,13 +853,13 @@ body {
 }
 
 #section-row-part-2-button-arrow-1 #arrow {
-    /* 화살표 길이 수정 CSS */
-    width: 1280px; 
+    /* 화살표 길이 수정 CSS, 결과값 1280*/
+    width: 100px; 
     }
 
 #section-row-part-2-button-arrow-2 #arrow {
-    /* 화살표 길이 수정 CSS */
-    width: 120px;
+    /* 화살표 길이 수정 CSS 결과값 120*/
+    width: 60px;
     }
 
 /* row secetion 3 */
@@ -947,7 +967,7 @@ body {
 
 #section-row-part-3-button-arrow-1 #arrow {
     /* 화살표 길이 수정 CSS */
-    width: 1280px; 
+    width: 100px; 
     }
 
 /* row section 2 */

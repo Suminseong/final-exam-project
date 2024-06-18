@@ -4,6 +4,30 @@ window.addEventListener('load', function () {
 
 let totalScroll = 0;
 
+//점차 증가하는 변수를 생성하는 함수 구문.
+function animateWidth(element, targetWidth) {
+    let startWidth = 60;
+    const duration = 500;
+    const startTime = performance.now();
+
+    function update(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        const newWidth = startWidth + progress * (targetWidth - startWidth);
+        element.style.width = `${newWidth}px`;
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        } else {
+            element.style.width = `${targetWidth}px`;
+        }
+    }
+    requestAnimationFrame(update);
+}
+
+const arrow1 = document.querySelector('#section-row-part-1-button-arrow-1 #arrow');
+const arrow2 = document.querySelector('#section-row-part-1-button-arrow-2 #arrow');
+
 //어사이드 메뉴버튼 구현
 const navButton = document.getElementById('menu');
 
@@ -23,13 +47,7 @@ let gallerySectionWidth = galleryWidth / 5;
 let halfValue = galleryClickListner.offsetWidth / 2;
 let nowGallery = 0;
 
-console.log(galleryClickListner); // 디버깅: 클릭 리스너가 올바르게 선택되었는지 확인
-console.log(`halfValue: ${halfValue}`); // 디버깅: halfValue 값 확인
-
 galleryClickListner.addEventListener('click', function (e) {
-    console.log(`click detected at offsetX: ${e.offsetX}`); // 디버깅: 클릭 위치 확인
-    console.log(`nowGallery is ${nowGallery}`);
-
     if (e.offsetX > halfValue) {
         if (nowGallery === 3) {
             nowGallery = 3;
@@ -49,6 +67,28 @@ galleryClickListner.addEventListener('click', function (e) {
     }
 });
 
+//Activity 글자 hover시 이미지 보여지기
+const hoverAreas = [
+    { textId: 'section-3-text-1', imgId: 'section-3-img-1' },
+    { textId: 'section-3-text-2', imgId: 'section-3-img-2' },
+    { textId: 'section-3-text-3', imgId: 'section-3-img-3' },
+    { textId: 'section-3-text-4', imgId: 'section-3-img-4' }
+];
+
+hoverAreas.forEach(area => {
+    const hoverArea = document.getElementById(area.textId);
+    const img = document.getElementById(area.imgId);
+
+    hoverArea.addEventListener('mouseover', function () {
+        img.classList.add('display-block');
+        img.classList.remove('display-none');
+    });
+
+    hoverArea.addEventListener('mouseout', function () {
+        img.classList.add('display-none');
+        img.classList.remove('display-block');
+    });
+});
 
 //스로틀링과 섹션단위 횡스크롤 기본정보
 const horizonalContents = document.querySelector('.row-content');
@@ -147,9 +187,9 @@ window.addEventListener('scroll', function () {
     let horizonScroll = 0;
 
     // 969에서 155 1329에서 150이 나오게 하는 식을 세워보니 −0.0139h+168.9583
-    vhCorrectionVal = (-0.0130 * viewportHeight) + 169.0583 - 32;
+    vhCorrectionVal = (-0.0139 * viewportHeight) + 169.0583 - 36;
 
-    if (scrollTop > 6420 && scrollTop < 8120) {
+    if (scrollTop > 6020 && scrollTop < 8120) {
         horizonScroll = (scrollTop - 6420) * 1;
         console.log(scrollTop)
         // horizonalContents.style.transform = `translateX(-${horizonScroll}px)`; //횡스크롤 단순 이동부
@@ -159,20 +199,24 @@ window.addEventListener('scroll', function () {
         console.log(progressBarWidth);
         console.log(vhCorrectionVal)
         //new - 횡스크롤 이동 페이지 단위 전환
-        if (scrollTop > 6420 && scrollTop < 6886) {
+        if (scrollTop > 6020 && scrollTop < 6886) {
             animateHorizontalScroll('show-part1', ['show-part2', 'show-part3']);
             horizonalContents.style.transform = `translateX(-${0}vw)`
-            window.scrollTo(0, scrollTop);
+            window.scrollTo(0, scrollTop);//스로틀링 후 스크롤 정렬
+            setTimeout(() => {
+                animateWidth(arrow1, 240);
+                animateWidth(arrow2, 120);
+            }, 1000);
         }
         else if (scrollTop > 6886 && scrollTop < 7452) {
             animateHorizontalScroll('show-part2', ['show-part1', 'show-part3']);
             horizonalContents.style.transform = `translateX(-${100}vw)`
-            window.scrollTo(0, scrollTop);
+            window.scrollTo(0, scrollTop);//스로틀링 후 스크롤 정렬
         }
         else if (scrollTop > 7452 && scrollTop < 8120) {
             animateHorizontalScroll('show-part3', ['show-part1', 'show-part2']);
             horizonalContents.style.transform = `translateX(-${200}vw)`
-            window.scrollTo(0, scrollTop);
+            window.scrollTo(0, scrollTop);//스로틀링 후 스크롤 정렬
         }
 
         if (progressBarWidth < vhCorrectionVal) { //횡스크롤에서 빠져나가기
@@ -180,10 +224,10 @@ window.addEventListener('scroll', function () {
             horizonalContents.style.transform = `translateX(-${0}px)`;
         }
     }
-    else if (scrollTop > 8120) {
+    else if (scrollTop > 8120) { //횡스크롤 이후
         horizonalContents.style.transform = `translate(-${200}vw, -${100}vw)`;
     }
-    else if (scrollTop < 6420) {
+    else if (scrollTop < 6020) { //횡스크롤 이전
         horizonalContents.style.transform = `translate(-${0}vw, ${100}vw)`;
     }
 
@@ -196,5 +240,5 @@ function animateHorizontalScroll(addClass, removeClasses) {
 
     setTimeout(() => {
         isAnimating = false;
-    }, 1000); // match the duration of the CSS transition
+    }, 1000);
 }
