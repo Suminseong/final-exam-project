@@ -46,7 +46,7 @@ const navButton = document.getElementById('menu');
 
 navButton.addEventListener('click', function () {
     const navSection = document.getElementById('left-nav');
-    navSection.classList.remove('hidden');
+    navSection.classList.remove('hidden');  
     navSection.classList.add('viewded');
 })
 
