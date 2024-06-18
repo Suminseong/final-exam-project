@@ -321,6 +321,7 @@ navBtn1.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    screenTop = 0;
 })
 navBtn2.addEventListener('click', () => {
     window.scrollTo({
@@ -328,6 +329,7 @@ navBtn2.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    screenTop = 2300;
 })
 navBtn3.addEventListener('click', () => {
     window.scrollTo({
@@ -335,6 +337,7 @@ navBtn3.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    screenTop = 4000;
 })
 navBtn4.addEventListener('click', () => {
     window.scrollTo({
@@ -342,11 +345,13 @@ navBtn4.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    screenTop = 7200;
 })
 navBtn5.addEventListener('click', () => {
     window.scrollTo({
-        top: 10700
+        top: 9700
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    screenTop = 9700;
 })
