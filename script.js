@@ -109,7 +109,7 @@ window.addEventListener('scroll', function () {
     let horizonScroll = 0;
 
     // 969에서 155 1329에서 150이 나오게 하는 식을 세워보니 −0.0139h+168.9583
-    vhCorrectionVal = (-0.0130 * viewportHeight) + 169.0583 ;
+    vhCorrectionVal = (-0.0130 * viewportHeight) + 169.0583 - 32 ;
 
     if (scrollTop > 6420 && scrollTop < 8120) {
         horizonScroll = (scrollTop - 6420) * 3;
@@ -119,24 +119,65 @@ window.addEventListener('scroll', function () {
         horizonalContents.classList.add('row-scroll-on');
         horizonalContents.classList.remove('row-scroll-off');
         console.log(progressBarWidth);
+        console.log(vhCorrectionVal)
         //new - 횡스크롤 이동 페이지 단위 전환
         if (scrollTop > 6420 && scrollTop < 6886){
             horizonalContents.style.transform = `translateX(-${0}vw)`;
             horizonalContents.classList.add('show-part1')
             horizonalContents.classList.remove('show-part2')
             horizonalContents.classList.remove('show-part3')
+            if (scrollTop > 6780 && scrollTop < 6886) {
+                this.window.addEventListener('wheel', preventScroll, { passive: false });
+                setTimeout(() => {
+                    window.removeEventListener('wheel', preventScroll, { passive: false });
+                }, 750);
+
+                function preventScroll(e) {
+                    e.preventDefault();
+                }
+            }
         }
         else if(scrollTop > 6886 && scrollTop < 7452){
             horizonalContents.style.transform = `translateX(-${100}vw)`;
             horizonalContents.classList.add('show-part2')
             horizonalContents.classList.remove('show-part1')
             horizonalContents.classList.remove('show-part3')
+            if (scrollTop > 6886 && scrollTop < 7000) {
+                this.window.addEventListener('wheel', preventScroll, { passive: false });
+                setTimeout(() => {
+                    window.removeEventListener('wheel', preventScroll, { passive: false });
+                }, 700);
+
+                function preventScroll(e) {
+                    e.preventDefault();
+                }
+            }
+            if (scrollTop > 7150 && scrollTop < 7252) {
+                this.window.addEventListener('wheel', preventScroll, { passive: false });
+                setTimeout(() => {
+                    window.removeEventListener('wheel', preventScroll, { passive: false });
+                }, 700);
+
+                function preventScroll(e) {
+                    e.preventDefault();
+                }
+            }
         }
         else if(scrollTop > 7452 && scrollTop < 8120){
             horizonalContents.style.transform = `translateX(-${200}vw)`;
             horizonalContents.classList.add('show-part3')
             horizonalContents.classList.remove('show-part2')
             horizonalContents.classList.remove('show-part1')
+            if (scrollTop > 8020 && scrollTop < 8070) {
+                this.window.addEventListener('wheel', preventScroll, { passive: false });
+                setTimeout(() => {
+                    window.removeEventListener('wheel', preventScroll, { passive: false });
+                }, 500);
+
+                function preventScroll(e) {
+                    e.preventDefault();
+                }
+            }
         }
 
         if (progressBarWidth < vhCorrectionVal) { //횡스크롤에서 빠져나가기

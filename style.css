@@ -51,14 +51,14 @@ body::-webkit-scrollbar {
     left: 0;
     bottom: 0;
     height: 100vh;
-    transform: translateY(0);
+    /* transform: translateY(0); */
 }
 
 .row-content-cover {
     position: relative;
     display: flex;
     height: 100vh;
-    justify-content: left;
+    /* justify-content: left; */
 }
 
 #bottom-marker {
@@ -944,7 +944,7 @@ body {
     width: 200vw;
     height: 100vh;
     background-color: bisque;
-    margin-top: 148px;
+    margin-top: 120vw;
 }
 
 .content-section-row-2 p {
