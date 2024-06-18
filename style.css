@@ -863,10 +863,12 @@ body {
     border-radius: 30px;
     background-color: #fff;
     z-index: 999;
+    transition: ease-in-out 0.1s;
 }
 
 #section-row-part-button:hover {
     cursor: pointer;
+    background-color: #d9e5ee;
 }
 
 .btn-invisible {
