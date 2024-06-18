@@ -122,6 +122,10 @@ body::-webkit-scrollbar {
     color: #fff;
 }
 
+#nav-content-2 p:hover{
+    cursor: pointer;
+}
+
 #nav-img {
     width: 480px;
     height: 100vh;
