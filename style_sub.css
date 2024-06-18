@@ -191,7 +191,7 @@ body {
 #menu {
     display: flex;
     background-image: url(img/menu-bar.png);
-    background-size: contain;
+    background-size: cover;
     width: 100px;
     height: 60px;
     transition: all 0.5s;
@@ -947,7 +947,7 @@ body {
     width: 200px;
     height: 200px;
     background-image: url(./img/sub_icon_part3_scuv.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -1362,7 +1362,7 @@ footer {
     width: 32px;
     height: 32px;
     background-image: url(./img/footer-mail-logo.png);
-    background-size: contain;
+    background-size: cover;
 }
 
 #footer-line {
