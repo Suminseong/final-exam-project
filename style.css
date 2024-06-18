@@ -15,21 +15,24 @@ body::-webkit-scrollbar {
 }
 
 /*debugging*/
+.show-part1{
+    transform: translateX(0vw);
+    transition: all 1s;
+}
+.show-part2{
+    transform: translateX(-100vw);
+    transition: all 1s;
+}
+.show-part3{
+    transform: translateX(-200vw);
+    transition: all 1s;
+}
+
 .row-content {
     left: 0;
     bottom: 0;
     height: 100vh;
     transform: translateY(0);
-}
-
-.row-scroll-on{
-    position: fixed;
-    top: 0;
-}
-
-.row-scroll-off{
-    left: 0;
-    bottom: 0;
 }
 
 .row-content-cover {
