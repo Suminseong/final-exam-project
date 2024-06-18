@@ -315,9 +315,10 @@ body {
     position: relative;
     width: 75vw;
     height: 74vh;
-    background-image: url(./img/sub_1_img.png);
+    background-image: url(./img/section-4-img-1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom;
 }
 
 #sub-1-section-1-title-1 {
