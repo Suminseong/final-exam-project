@@ -165,8 +165,11 @@ let isAnimating = false;
 
 window.addEventListener('scroll', function () {
     if (isAnimating) return;
-
     let scrollTop = window.scrollY;
+
+    if(scrollTop>8200 && scrollTop<10700){
+        console.log(scrollY)
+    }
     console.log(scrollTop);
     // 텍스트 요소의 초기 위치 (픽셀 단위)
     const textBlackInitialTop = 250;
