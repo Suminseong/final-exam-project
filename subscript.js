@@ -30,3 +30,18 @@ window.addEventListener('scroll', function () {
     const progressBarWidth = scrollProgress * 200;
     document.getElementById('scroll-progress-current').style.width = progressBarWidth + 'px';
 })
+
+const navButton = document.getElementById('menu');
+const navCloseButton = document.getElementById('nav-close-icon')
+
+navButton.addEventListener('click', function () {
+    const navSection = document.getElementById('left-nav');
+    navSection.classList.remove('hidden');  
+    navSection.classList.add('viewded');
+})
+
+navCloseButton.addEventListener('click', function () {
+    const navSection = document.getElementById('left-nav');
+    navSection.classList.add('hidden');
+    navSection.classList.remove('viewded');
+})
