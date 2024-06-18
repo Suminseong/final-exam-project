@@ -336,6 +336,7 @@ navBtn1.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
     screenTop = 0;
 })
 navBtn2.addEventListener('click', () => {
@@ -344,6 +345,7 @@ navBtn2.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
     screenTop = 2300;
 })
 navBtn3.addEventListener('click', () => {
@@ -352,6 +354,7 @@ navBtn3.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
     screenTop = 4000;
 })
 navBtn4.addEventListener('click', () => {
@@ -360,6 +363,7 @@ navBtn4.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
     screenTop = 7200;
 })
 navBtn5.addEventListener('click', () => {
@@ -368,5 +372,6 @@ navBtn5.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
     screenTop = 9700;
 })

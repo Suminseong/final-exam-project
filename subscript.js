@@ -59,6 +59,7 @@ navBtn1.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
 })
 navBtn2.addEventListener('click', () => {
     window.scrollTo({
@@ -66,6 +67,7 @@ navBtn2.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
 })
 navBtn3.addEventListener('click', () => {
     window.scrollTo({
@@ -73,4 +75,5 @@ navBtn3.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
 })
