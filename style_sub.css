@@ -255,6 +255,7 @@ body {
 #sub-1-section-2-part-1 p span {
     background: linear-gradient(to right, #FF5757, #FA983D);
     color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
 }
 
@@ -814,6 +815,7 @@ body {
 #sub-2-section-2-part-title span {
     background: linear-gradient(to right, #00A3FF, #38DBFF);
     color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
 }
 
@@ -985,6 +987,7 @@ body {
 #sub-3-section-2-part-1 p span {
     background: linear-gradient(to right, #60CC45, #5CE3BB);
     color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
 }
 
