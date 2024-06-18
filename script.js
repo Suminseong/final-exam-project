@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('loading-screen').style.display = 'none';
 });
 

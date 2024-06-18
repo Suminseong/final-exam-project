@@ -1,3 +1,7 @@
+window.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('loading-screen').style.display = 'none';
+});
+
 document.getElementById('sub-1-section-1-logo').addEventListener('click', () => {
     location.href='index.html';
 })
