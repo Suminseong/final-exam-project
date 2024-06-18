@@ -142,8 +142,10 @@ hoverAreas.forEach(area => {
     });
 
     hoverArea.addEventListener('mouseout', function () {
-        img.classList.add('display-none');
-        img.classList.remove('display-block');
+        setTimeout(() => {
+            img.classList.add('display-none');
+            img.classList.remove('display-block');
+        }, 75)
     });
 });
 

@@ -131,7 +131,51 @@ body::-webkit-scrollbar {
 #nav-content-2 p {
     font-size: 80px;
     font-weight: 900;
+}
+
+.scroll-to-1 {
     color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-1:hover {
+    color: #c0d1dd;
+}
+
+.scroll-to-2 {
+    color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-2:hover {
+    color: #c0d1dd;
+}
+
+.scroll-to-3 {
+    color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-3:hover {
+    color: #c0d1dd;
+}
+
+.scroll-to-4 {
+    color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-4:hover {
+    color: #c0d1dd;
+}
+
+.scroll-to-5 {
+    color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-5:hover {
+    color: #c0d1dd;
 }
 
 #nav-content-2 p:hover{
@@ -582,6 +626,7 @@ body {
     font-size: 80px;
     font-weight: 900;
     color: #202020;
+    transition: ease-in-out 0.25s;
 }
 
 #section-3-text-1 {
@@ -591,11 +636,18 @@ body {
     z-index: 99991;
 }
 
+#section-3-text-1:hover {
+    color: #53AAE9;
+}
+
 #section-3-text-2 {
     position: absolute;
     left: 936px;
     top: 1249px;
     z-index: 99991;
+}
+#section-3-text-2:hover {
+    color: #53AAE9;
 }
 
 #section-3-text-3 {
@@ -605,11 +657,19 @@ body {
     z-index: 99991;
 }
 
+#section-3-text-3:hover {
+    color: #53AAE9;
+}
+
 #section-3-text-4 {
     position: absolute;
     left: 800px;
     top: 1969px;
     z-index: 99991;
+}
+
+#section-3-text-4:hover {
+    color: #53AAE9;
 }
 
 .section-3-img {
