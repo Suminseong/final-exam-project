@@ -94,6 +94,14 @@ let gallerySectionWidth = galleryWidth / 5;
 let halfValue = galleryClickListner.offsetWidth / 2;
 let nowGallery = 0;
 
+
+
+window.addEventListener('mousemove', (e) => {
+    let galleryContainerMovement = 160+(e.pageX*0.05);
+    console.log(galleryContainerMovement);
+    galleryContainer.style.left = `${galleryContainerMovement}px`;
+})
+
 galleryClickListner.addEventListener('click', function (e) {
     if (e.offsetX > halfValue) {
         if (nowGallery === 3) {
@@ -167,8 +175,11 @@ let isAnimating = false;
 
 window.addEventListener('scroll', function () {
     if (isAnimating) return;
-
     let scrollTop = window.scrollY;
+
+    if(scrollTop>8200 && scrollTop<10700){
+        console.log(scrollY)
+    }
     console.log(scrollTop);
     // 텍스트 요소의 초기 위치 (픽셀 단위)
     const textBlackInitialTop = 250;
