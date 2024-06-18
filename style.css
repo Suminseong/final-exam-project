@@ -681,6 +681,10 @@ body {
     z-index: 999;
 }
 
+#section-row-part-button:hover {
+    cursor: pointer;
+}
+
 .btn-invisible {
     opacity: 0;
     transition: all 0.5s ease;
