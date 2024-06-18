@@ -42,15 +42,15 @@ const arrowButton2 = document.querySelector('.btn2');
 const arrowButton3 = document.querySelector('.btn3');
 
 arrowButton1.addEventListener('click', () => {
-    location.href='sub_1.html';
+    location.href='final-exam-project/sub_1.html';
 })
 
 arrowButton2.addEventListener('click', () => {
-    location.href='sub_2.html';
+    location.href='final-exam-project/sub_2.html';
 })
 
 arrowButton3.addEventListener('click', () => {
-    location.href='sub_3.html';
+    location.href='final-exam-project/sub_3.html';
 })
 
 //어사이드 메뉴버튼 구현

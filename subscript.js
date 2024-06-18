@@ -1,9 +1,9 @@
 document.getElementById('sub-1-section-1-logo').addEventListener('click', () => {
-    location.href='/index.html';
+    location.href='final-exam-project/';
 })
 
 document.getElementById('footer-content-1-logo').addEventListener('click', () => {
-    location.href='/index.html';
+    location.href='final-exam-project/';
 })
 
 document.getElementById('footer-content-1-SNS-1').addEventListener('click', () => {
