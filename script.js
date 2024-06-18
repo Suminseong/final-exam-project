@@ -55,11 +55,18 @@ arrowButton3.addEventListener('click', () => {
 
 //어사이드 메뉴버튼 구현
 const navButton = document.getElementById('menu');
+const navCloseButton = document.getElementById('nav-close-icon')
 
 navButton.addEventListener('click', function () {
     const navSection = document.getElementById('left-nav');
     navSection.classList.remove('hidden');  
     navSection.classList.add('viewded');
+})
+
+navCloseButton.addEventListener('click', function () {
+    const navSection = document.getElementById('left-nav');
+    navSection.classList.add('hidden');
+    navSection.classList.remove('viewded');
 })
 
 //갤러리 작동. window 뷰포트 화면 이내에 들어왔을 때 클릭이벤트를 받아 실행 할 것
