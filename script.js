@@ -100,21 +100,25 @@ window.addEventListener('scroll', function () {
     let horizonScroll = 0;
 
     // 969에서 155 1329에서 150이 나오게 하는 식을 세워보니 −0.0139h+168.9583
-    vhCorrectionVal = (-0.0130 * viewportHeight) + 169.0583 ;
+    vhCorrectionVal = (-0.0130 * viewportHeight) + 169.0583 - 27 ;
 
     if (scrollY > 6420 && scrollY < 8120) {
         horizonScroll = (scrollY - 6420) * 3;
         console.log(scrollY)
-        horizonalContents.style.transform = `translateX(-${horizonScroll}px)`;
         horizonalContents.style.position = 'fixed';
         horizonalContents.classList.add('.row-scroll-on')
         horizonalContents.classList.remove('.row-scroll-off')
         console.log(progressBarWidth)
+        console.log(vhCorrectionVal)
+        console.log(viewportHeight)
         if (progressBarWidth < vhCorrectionVal) {
             horizonalContents.style.position = ''
             horizonalContents.classList.remove('.row-scroll-on')
             horizonalContents.classList.add('.row-scroll-off')
             horizonalContents.style.transform = `translateX(-${0}px)`;
+        }
+        if (scrollY > 6600 && scrollY < 8120 ) {
+            horizonalContents.style.transform = `translateX(-${horizonScroll}px)`;
         }
     }
     else if (scrollY > 8120) {
