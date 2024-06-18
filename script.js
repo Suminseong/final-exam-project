@@ -56,15 +56,14 @@ arrowButton3.addEventListener('click', () => {
 //어사이드 메뉴버튼 구현
 const navButton = document.getElementById('menu');
 const navCloseButton = document.getElementById('nav-close-icon')
+const navSection = document.getElementById('left-nav');
 
 navButton.addEventListener('click', function () {
-    const navSection = document.getElementById('left-nav');
     navSection.classList.remove('hidden');  
     navSection.classList.add('viewded');
 })
 
 navCloseButton.addEventListener('click', function () {
-    const navSection = document.getElementById('left-nav');
     navSection.classList.add('hidden');
     navSection.classList.remove('viewded');
 })
@@ -168,6 +167,7 @@ window.addEventListener('scroll', function () {
     if (isAnimating) return;
 
     let scrollTop = window.scrollY;
+    console.log(scrollTop);
     // 텍스트 요소의 초기 위치 (픽셀 단위)
     const textBlackInitialTop = 250;
     const textWhiteInitialTop = 500;
@@ -237,22 +237,16 @@ window.addEventListener('scroll', function () {
     let horizonScroll = 0;
 
     // 969에서 155 1329에서 150이 나오게 하는 식을 세워보니 −0.0139h+168.9583
-    vhCorrectionVal = (-0.0139 * viewportHeight) + 169.0583 - 36;
+    vhCorrectionVal = (-0.0139 * viewportHeight) + 169.0583 - 43;
 
     if (scrollTop > 6020 && scrollTop < 8120) {
         horizonScroll = (scrollTop - 6420) * 1;
-        console.log(scrollTop)
         // horizonalContents.style.transform = `translateX(-${horizonScroll}px)`; //횡스크롤 단순 이동부
         horizonalContents.style.position = 'fixed';
-        horizonalContents.classList.add('row-scroll-on');
-        horizonalContents.classList.remove('row-scroll-off');
-        console.log(progressBarWidth);
-        console.log(vhCorrectionVal)
         //new - 횡스크롤 이동 페이지 단위 전환
         if (scrollTop > 6020 && scrollTop < 6886) {
             animateHorizontalScroll('show-part1', ['show-part2', 'show-part3']);
             horizonalContents.style.transform = `translateX(-${0}vw)`
-            window.scrollTo(0, scrollTop);//스로틀링 후 스크롤 정렬
             setTimeout(() => {
                 if (!isAnimated1) {
                     isAnimated1 = true; // 플래그 변수를 true로 설정하여 애니메이션이 한 번만 실행되도록 함
@@ -314,3 +308,45 @@ function animateHorizontalScroll(addClass, removeClasses) {
         isAnimating = false;
     }, 1000);
 }
+
+const navBtn1 = document.querySelector('.scroll-to-1');
+const navBtn2 = document.querySelector('.scroll-to-2');
+const navBtn3 = document.querySelector('.scroll-to-3');
+const navBtn4 = document.querySelector('.scroll-to-4');
+const navBtn5 = document.querySelector('.scroll-to-5');
+
+navBtn1.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0
+    })
+    navSection.classList.add('hidden');  
+    navSection.classList.remove('viewded');
+})
+navBtn2.addEventListener('click', () => {
+    window.scrollTo({
+        top: 2300
+    })
+    navSection.classList.add('hidden');  
+    navSection.classList.remove('viewded');
+})
+navBtn3.addEventListener('click', () => {
+    window.scrollTo({
+        top: 4000
+    })
+    navSection.classList.add('hidden');  
+    navSection.classList.remove('viewded');
+})
+navBtn4.addEventListener('click', () => {
+    window.scrollTo({
+        top: 7200
+    })
+    navSection.classList.add('hidden');  
+    navSection.classList.remove('viewded');
+})
+navBtn5.addEventListener('click', () => {
+    window.scrollTo({
+        top: 10700
+    })
+    navSection.classList.add('hidden');  
+    navSection.classList.remove('viewded');
+})
