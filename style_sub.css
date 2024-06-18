@@ -37,7 +37,6 @@ body {
     left: 0;
     background-color: #53AAE9;
     z-index: 99999999;
-    /*히히내가제일쎄!*/
     transform: translateX(0vw);
     transition: all 0.7s ease-in-out;
 }
@@ -47,6 +46,106 @@ body {
     transition: all 0.7s ease-in-out;
 }
 
+#nav-close-icon {
+    display: flex;
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    background-image: url(./img/left_nav_close_icon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 5.2vw;
+    top: 8.3vh;
+}
+
+#nav-contents {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    width: 888px;
+    height: 680px;
+    top: 18.5vh;
+    left: 6.25vw;
+}
+
+#nav-content-1 {
+    display: flex;
+    width: 244px;
+    height: 586px;
+    flex-direction: column;
+}
+
+#nav-content-1-1 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 50%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#nav-content-1-1 span {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#nav-content-1-2 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    margin-top: 60px;
+}
+
+#nav-content-1-2 span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#nav-content-1-3 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: underline;
+    margin-top: 36px;
+}
+
+#nav-content-1-4 {
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+    margin-top: 113px;
+}
+
+#nav-content-1-4 span {
+    font-weight: 400;
+    color: #d9d9d9;
+}
+
+#nav-content-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 453px;
+    height: 680px;
+}
+
+#nav-content-2 p {
+    font-size: 80px;
+    font-weight: 900;
+    color: #fff;
+}
+
+#nav-img {
+    width: 480px;
+    height: 100vh;
+    position: absolute;
+    background-image: url(./img/left_nav_img.png);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    right: 0;
+}
 /*left navigation end*/
 
 /* 좌측 fixed */
@@ -60,7 +159,7 @@ body {
     height: 400px;
     margin-top: 90px;
     margin-left: 100px;
-    z-index: 10;
+    z-index: 8888;
 }
 
 #menu {
@@ -69,6 +168,10 @@ body {
     background-size: contain;
     width: 100px;
     height: 60px;
+}
+
+#menu:hover {
+    cursor: pointer;
 }
 
 #left-text {
@@ -83,12 +186,13 @@ body {
 #left-text-top {
     font-size: 16px;
     font-weight: 700;
+    letter-spacing: 12px;
 }
 
 #left-text-bottom {
     font-size: 16px;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 16px;
 }
 
 /* 우측 fixed */
@@ -99,6 +203,7 @@ body {
     align-items: center;
     justify-content: space-between;
     right: 0%;
+    top: 0;
     margin-top: 45px;
     margin-right: 28px;
     width: 200px;
@@ -114,14 +219,11 @@ body {
     height: 247px;
 }
 
-#sub-1-section-1-logo:hover {
-    cursor: pointer;
-}
-
 #scroll-bar {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    letter-spacing: 12px;
     align-items: center;
     transform: rotate(90deg);
 }

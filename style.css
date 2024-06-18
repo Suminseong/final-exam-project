@@ -303,12 +303,13 @@ body {
 #left-text-top {
     font-size: 16px;
     font-weight: 700;
+    letter-spacing: 12px;
 }
 
 #left-text-bottom {
     font-size: 16px;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 16px;
 }
 
 /* 우측 fixed */
@@ -339,6 +340,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    letter-spacing: 12px;
     align-items: center;
     transform: rotate(90deg);
 }
