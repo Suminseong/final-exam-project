@@ -160,5 +160,5 @@ function animateHorizontalScroll(addClass, removeClasses) {
 
     setTimeout(() => {
         isAnimating = false;
-    }, 200); // match the duration of the CSS transition
+    }, 1000); // match the duration of the CSS transition
 }
