@@ -61,13 +61,13 @@ const navSection = document.getElementById('left-nav');
 navButton.addEventListener('click', function () {
     navSection.classList.remove('hidden');  
     navSection.classList.add('viewded');
-    navButton.classList.add('menu_open');
+    navButton.style.transform = 'rotate(90deg)'; 
 })
 
 navCloseButton.addEventListener('click', function () {
     navSection.classList.add('hidden');
     navSection.classList.remove('viewded');
-    navButton.classList.add('menu_close');
+    navButton.style.transform = 'rotate(0deg)'; 
 })
 
 //갤러리 작동. window 뷰포트 화면 이내에 들어왔을 때 클릭이벤트를 받아 실행 할 것

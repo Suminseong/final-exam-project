@@ -39,11 +39,13 @@ const navSection = document.getElementById('left-nav');
 navButton.addEventListener('click', function () {
     navSection.classList.remove('hidden');  
     navSection.classList.add('viewded');
+    navButton.style.transform = 'rotate(90deg)'; 
 })
 
 navCloseButton.addEventListener('click', function () {
     navSection.classList.add('hidden');
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
 })
 
 const navBtn1 = document.querySelector('.scroll-to-1');

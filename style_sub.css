@@ -133,7 +133,33 @@ body {
 #nav-content-2 p {
     font-size: 80px;
     font-weight: 900;
+}
+
+.scroll-to-1 {
     color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-1:hover {
+    color: #c0d1dd;
+}
+
+.scroll-to-2 {
+    color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-2:hover {
+    color: #c0d1dd;
+}
+
+.scroll-to-3 {
+    color: #fff;
+    transition: ease-in-out 0.25s;
+}
+
+.scroll-to-3:hover {
+    color: #c0d1dd;
 }
 
 #nav-img {
@@ -168,10 +194,19 @@ body {
     background-size: contain;
     width: 100px;
     height: 60px;
+    transition: all 0.5s;
 }
 
 #menu:hover {
     cursor: pointer;
+}
+
+.menu_open {
+    transform: rotate(90deg);
+}
+
+.menu_close {
+    transform: rotate(0deg);
 }
 
 #left-text {
