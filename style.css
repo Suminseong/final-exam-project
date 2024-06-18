@@ -92,18 +92,30 @@ body::-webkit-scrollbar {
     font-size: 20px;
     font-weight: 900;
     color: #fff;
+    margin-top: 60px;
+}
+
+#nav-content-1-3 span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#nav-content-1-4 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
     text-decoration: underline;
     margin-top: 36px;
 }
 
-#nav-content-1-4 {
+#nav-content-1-5 {
     font-size: 28px;
     font-weight: 900;
     color: #fff;
     margin-top: 113px;
 }
 
-#nav-content-1-4 span {
+#nav-content-1-5 span {
     font-weight: 400;
     color: #d9d9d9;
 }
