@@ -374,6 +374,7 @@ body {
 
 /* column section-1 */
 #section-1 {
+    display: flex;
     height: 2040px;
     flex-direction: column;
     align-items: center;
@@ -381,14 +382,15 @@ body {
 
 #section-1-logo {
     display: flex;
+    position: absolute;
     background-image: url(img/wavepark-logo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 320px;
     height: 80px;
-    margin-top: 80px;
-    top: 0;
+    margin-top: 0px;
+    top: 80px;
 }
 
 #section-1-text-black,
