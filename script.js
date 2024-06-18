@@ -103,7 +103,7 @@ window.addEventListener('scroll', function () {
     vhCorrectionVal = (-0.0130 * viewportHeight) + 169.0583 - 27 ;
 
     if (scrollY > 6420 && scrollY < 8120) {
-        horizonScroll = (scrollY - 6420) * 3;
+        horizonScroll = (scrollY - 6600) * 3;
         console.log(scrollY)
         horizonalContents.style.position = 'fixed';
         horizonalContents.classList.add('.row-scroll-on')
