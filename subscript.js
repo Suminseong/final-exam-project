@@ -1,9 +1,9 @@
 document.getElementById('sub-1-section-1-logo').addEventListener('click', () => {
-    location.href='/index.html';
+    location.href='index.html';
 })
 
 document.getElementById('footer-content-1-logo').addEventListener('click', () => {
-    location.href='/index.html';
+    location.href='index.html';
 })
 
 document.getElementById('footer-content-1-SNS-1').addEventListener('click', () => {
@@ -19,6 +19,7 @@ document.getElementById('footer-content-1-SNS-3').addEventListener('click', () =
 let isAnimating = false;
 
 window.addEventListener('scroll', function () {
+    console.log(scrollY)
     if (isAnimating) return;
 
     let scrollTop = window.scrollY;
@@ -33,15 +34,41 @@ window.addEventListener('scroll', function () {
 
 const navButton = document.getElementById('menu');
 const navCloseButton = document.getElementById('nav-close-icon')
+const navSection = document.getElementById('left-nav');
 
 navButton.addEventListener('click', function () {
-    const navSection = document.getElementById('left-nav');
     navSection.classList.remove('hidden');  
     navSection.classList.add('viewded');
 })
 
 navCloseButton.addEventListener('click', function () {
-    const navSection = document.getElementById('left-nav');
     navSection.classList.add('hidden');
+    navSection.classList.remove('viewded');
+})
+
+const navBtn1 = document.querySelector('.scroll-to-1');
+const navBtn2 = document.querySelector('.scroll-to-2');
+const navBtn3 = document.querySelector('.scroll-to-3');
+
+
+navBtn1.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0
+    })
+    navSection.classList.add('hidden');  
+    navSection.classList.remove('viewded');
+})
+navBtn2.addEventListener('click', () => {
+    window.scrollTo({
+        top: 1100
+    })
+    navSection.classList.add('hidden');  
+    navSection.classList.remove('viewded');
+})
+navBtn3.addEventListener('click', () => {
+    window.scrollTo({
+        top: 2200
+    })
+    navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
 })
