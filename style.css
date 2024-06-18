@@ -19,17 +19,7 @@ body::-webkit-scrollbar {
     left: 0;
     bottom: 0;
     height: 100vh;
-    /* transform: translateY(0); */
-}
-
-.row-scroll-on{
-    position: fixed;
-    top: 0;
-}
-
-.row-scroll-off{
-    left: 0;
-    bottom: 0;
+    transform: translateY(0);
 }
 
 .row-content-cover {
@@ -521,7 +511,6 @@ body {
     width: 300vw;
     height: 100vh;
     background-color: #53AAE9;
-    overflow: hidden;
 }
 
 .content-section-row-part {
@@ -923,7 +912,7 @@ body {
     width: 200vw;
     height: 100vh;
     background-color: bisque;
-    margin-top: 100vw;
+    margin-top: 148px;
 }
 
 .content-section-row-2 p {
