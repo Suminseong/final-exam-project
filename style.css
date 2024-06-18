@@ -14,6 +14,19 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #fffffe;
+    /* 드래그 금지 - 필요할때 활성화 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-use-select: none;
+    user-select: none;
+    width: 100vw;
+    height: 200vh;
+}
+
 /*left navigation*/
 #left-nav {
     width: 100vw;
@@ -311,19 +324,6 @@ body::-webkit-scrollbar {
 }
 
 /*----------------------------------*/
-
-body {
-    overflow-x: hidden;
-    box-sizing: border-box;
-    background-color: #fffffe;
-    /* 드래그 금지 - 필요할때 활성화 */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-use-select: none;
-    user-select: none;
-    width: 100vw;
-    height: 200vh;
-}
 
 /* 좌측 fixed */
 .aside-left {
