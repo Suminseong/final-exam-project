@@ -626,6 +626,7 @@ body {
     font-size: 80px;
     font-weight: 900;
     color: #202020;
+    transition: ease-in-out 0.25s;
 }
 
 #section-3-text-1 {
@@ -635,11 +636,18 @@ body {
     z-index: 99991;
 }
 
+#section-3-text-1:hover {
+    color: #53AAE9;
+}
+
 #section-3-text-2 {
     position: absolute;
     left: 936px;
     top: 1249px;
     z-index: 99991;
+}
+#section-3-text-2:hover {
+    color: #53AAE9;
 }
 
 #section-3-text-3 {
@@ -649,11 +657,19 @@ body {
     z-index: 99991;
 }
 
+#section-3-text-3:hover {
+    color: #53AAE9;
+}
+
 #section-3-text-4 {
     position: absolute;
     left: 800px;
     top: 1969px;
     z-index: 99991;
+}
+
+#section-3-text-4:hover {
+    color: #53AAE9;
 }
 
 .section-3-img {
