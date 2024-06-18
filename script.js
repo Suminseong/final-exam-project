@@ -94,6 +94,14 @@ let gallerySectionWidth = galleryWidth / 5;
 let halfValue = galleryClickListner.offsetWidth / 2;
 let nowGallery = 0;
 
+
+
+window.addEventListener('mousemove', (e) => {
+    let galleryContainerMovement = 160+(e.pageX*0.05);
+    console.log(galleryContainerMovement);
+    galleryContainer.style.left = `${galleryContainerMovement}px`;
+})
+
 galleryClickListner.addEventListener('click', function (e) {
     if (e.offsetX > halfValue) {
         if (nowGallery === 3) {
