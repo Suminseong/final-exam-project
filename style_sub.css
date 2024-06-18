@@ -255,6 +255,7 @@ body {
 #sub-1-section-2-part-1 p span {
     background: linear-gradient(to right, #FF5757, #FA983D);
     color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
 }
 
@@ -814,6 +815,7 @@ body {
 #sub-2-section-2-part-title span {
     background: linear-gradient(to right, #00A3FF, #38DBFF);
     color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
 }
 
@@ -871,6 +873,197 @@ body {
     width: 80px;
     height: 80px;
     background-image: url(./img/sub_icon_part3_scuv.png);
+    background-size: cover;
+}
+
+/* sub 3 */
+/* section 1 */
+#sub-3-section-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 1065px;
+}
+
+#sub-3-section-1-img {
+    display: flex;
+    position: relative;
+    position: absolute;
+    width: 1200px;
+    height: 800px;
+    background-image: url(./img/sub_3_img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 105px;
+    left: 12.5vw;
+}
+
+#sub-3-section-1-title-1-white {
+    position: absolute;
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: #fff;
+    top: 15.7vh;
+    right: 0vw;
+}
+
+#sub-3-section-1-title-1-black {
+    position: absolute;
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: #000;
+    top: 15.7vh;
+    right: -12vw;
+    z-index: 2;
+}
+
+#sub-3-section-1-txt-div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    position: absolute;
+    width: 140px;
+    height: 130px;
+    bottom: 5.5vh;
+    left: 4.2vw;
+}
+
+#sub-3-section-1-title-detail {
+    position: absolute;
+    width: 140px;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    line-height: 150%;
+    color: #fff;
+}
+
+#sub-3-section-1-detail-bar {
+    display: flex;
+    position: absolute;
+    width: 140px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #fff;
+    bottom: 0;
+}
+
+/* section 2 */
+#sub-3-section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 1714px;
+}
+
+#sub-3-section-2-parts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1235px;
+    height: 1084px;
+}
+
+#sub-3-section-2-part-1 {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 200px;
+}
+
+#sub-3-section-2-part-1 p {
+    font-size: 64px;
+    font-weight: 900;
+    color: #202020;
+    width: 723px;
+    height: 192px;
+}
+
+#sub-3-section-2-part-1 p span {
+    background: linear-gradient(to right, #60CC45, #5CE3BB);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#sub-3-section-2-part-1 div {
+    display: flex;
+    width: 180px;
+    height: 180px;
+    background-image: url(./img/sub_icon_2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#sub-3-section-2-part-2 {
+    display: flex;
+    flex-direction: column;
+    width: 1235px;
+    height: 608px;
+    justify-content: space-between;
+    margin-top: 112px;
+}
+
+#sub-3-section-2-part-2-1 {
+    display: flex;
+    flex-direction: row;
+    width: 1235px;
+    height: 107px;
+    justify-content: space-between;
+}
+
+#sub-3-part1-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 509px;
+    height: 94px;
+}
+
+#sub-3-part1-1-1 {
+    width: 509px;
+}
+
+#sub-3-part1-1-2 {
+    width: 509px;
+}
+
+#sub-3-section-2-part-3 {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    height: 68px;
+    border-radius: 60px;
+    border: 2px solid #505050;
+}
+
+#sub-3-part2-1 {
+    justify-content: center;
+}
+
+#sub-3-part2-bar {
+    height: 28px;
+}
+
+#sub-3-part2-2 {
+    justify-content: center;
+}
+
+.surfing {
+    font-size: 28px;
+    font-weight: 900;
+    color: #60CD47;
+}
+
+.part3-surfing-icon {
+    width: 80px;
+    height: 80px;
+    background-image: url(./img/sub_icon_part3_surfing.png);
     background-size: cover;
 }
 
