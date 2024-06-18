@@ -266,6 +266,8 @@ body {
     display: flex;
     background-image: url(img/wavepark-logo.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 320px;
     height: 80px;
     margin-top: 80px;
@@ -942,14 +944,108 @@ body {
 /* row section 2 */
 .content-section-row-2 {
     display: flex;
+    position: relative;
     width: 200vw;
     height: 100vh;
-    background-color: bisque;
     margin-top: 120vw;
 }
 
-.content-section-row-2 p {
-    font-size: 100px;
+#section-2-row-part-imgs {
+    display: flex;
+    position: absolute;
+    width: 3440px;
+    height: 720px;
+    align-items: center;
+    justify-content: space-between;
+    left: 160px;
+    top: 5vh;
+}
+
+#section-2-row-part-1 {
+    display: flex;
+    width: 500px;
+    height: 400px;
+    background-image: url(./img/section-5-img-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#section-2-row-part-2 {
+    display: flex;
+    width: 360px;
+    height: 320px;
+    background-image: url(./img/section-5-img-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#section-2-row-part-3 {
+    display: flex;
+    width: 600px;
+    height: 720px;
+    background-image: url(./img/section-5-img-3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#section-2-row-part-4 {
+    display: flex;
+    width: 300px;
+    height: 400px;
+    background-image: url(./img/section-5-img-4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#section-2-row-part-5 {
+    display: flex;
+    width: 400px;
+    height: 500px;
+    background-image: url(./img/section-5-img-5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#section-2-row-part-6 {
+    display: flex;
+    width: 440px;
+    height: 400px;
+    background-image: url(./img/section-5-img-6.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#section-2-row-part-7 {
+    display: flex;
+    width: 480px;
+    height: 720px;
+    background-image: url(./img/section-5-img-7.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#section-2-row-part-bar {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    width: 980px;
+    height: 48px;
+    padding: 0 20px;
+    left: 450px;
+    bottom: 40px;
+}
+
+.row-part-current-bar {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #d9d9d9;
+}
+
+#current-1 {
+    background-color: #53AAE9;
 }
 
 /* footer section */
