@@ -1,0 +1,1 @@
+const logo = document.getElementById('sub-1-section-1-logo')
