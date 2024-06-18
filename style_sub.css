@@ -660,6 +660,220 @@ body {
 }
 
 
+/* sub 2 */
+/* section 1 */
+#sub-2-section-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 1065px;
+}
+
+#sub-2-section-contents {
+    display: flex;
+    width: 1360px;
+    height: 800px;
+    flex-direction: row;
+    position: relative;
+    margin-top: 105px;
+}
+
+#sub-2-section-1-img {
+    display: flex;
+    position: relative;
+    width: 800px;
+    height: 800px;
+    background-image: url(./img/sub_2_img.png);
+    background-size: contain;
+}
+
+#sub-2-section-1-title-1-white {
+    position: absolute;
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: #fff;
+    top: 8.6vh;
+    right: 0vw;
+    z-index: 2;
+}
+
+#sub-2-section-1-title-2-white {
+    position: absolute;
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: #fff;
+    top: 22.9vh;
+    right: 0vw;
+    z-index: 2;
+}
+
+#sub-2-section-1-title-1-black {
+    position: absolute;
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: #000;
+    top: 8.6vh;
+    right: -10vw;
+    z-index: 1;
+}
+
+#sub-2-section-1-title-2-black {
+    position: absolute;
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    color: #000;
+    top: 22.9vh;
+    right: -19vw;
+    z-index: 1;
+}
+
+#sub-2-section-1-txt-div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    position: absolute;
+    width: 180px;
+    height: 130px;
+    right: 0;
+    bottom: 65px;
+}
+
+#sub-2-section-1-title-detail {
+    position: absolute;
+    width: 180px;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    line-height: 150%;
+    color: #505050;
+}
+
+#sub-2-section-1-detail-bar {
+    display: flex;
+    position: absolute;
+    width: 180px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #505050;
+    bottom: 0;
+}
+
+/* sub 2 section 2 */
+#sub-2-section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 1600px;
+}
+
+#sub-2-section-2-parts {
+    display: flex;
+    width: 1200px;
+    height: 1236px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sub-2-section-2-part-1 {
+    display: flex;
+    align-items: center;
+    width: 559px;
+    height: 996px;
+    flex-direction: column;
+}
+
+#sub-2-section-2-part-icon {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url(./img/sub_icon_part3_scuv.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#sub-2-section-2-part-title {
+    font-size: 64px;
+    font-weight: 900;
+    color: #202020;
+    width: 723px;
+    height: 192px;
+    width: 526px;
+    height: 192px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+#sub-2-section-2-part-title span {
+    background: linear-gradient(to right, #00A3FF, #38DBFF);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+#sub-2-section-2-part-1-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 60px;
+    border-radius: 30px;
+    background: linear-gradient(to right, #00A3FF, #38DBFF);
+    margin-top: 100px;
+}
+
+#sub-2-section-2-part-1-1 p {
+    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#sub-2-section-2-part-txt-1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #202020;
+    margin-top: 16px;
+}
+
+#sub-2-part1-2 {
+    margin-top: 90px;
+}
+
+#sub-2-section-2-part-txt-2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #202020;
+    margin-top: 90px;
+    margin-bottom: 120px;
+}
+
+#sub-2-section-2-part-txt-2 span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #505050;
+}
+
+/* sub 2 section 3 */
+
+.scuva {
+    font-size: 28px;
+    font-weight: 900;
+    color: #02A5FF;
+}
+
+.part3-scuva-icon {
+    width: 80px;
+    height: 80px;
+    background-image: url(./img/sub_icon_part3_scuv.png);
+    background-size: cover;
+}
+
 /* footer section */
 footer {
     display: flex;
