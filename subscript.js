@@ -39,11 +39,13 @@ const navSection = document.getElementById('left-nav');
 navButton.addEventListener('click', function () {
     navSection.classList.remove('hidden');  
     navSection.classList.add('viewded');
+    navButton.style.transform = 'rotate(90deg)'; 
 })
 
 navCloseButton.addEventListener('click', function () {
     navSection.classList.add('hidden');
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
 })
 
 const navBtn1 = document.querySelector('.scroll-to-1');
@@ -57,6 +59,7 @@ navBtn1.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
 })
 navBtn2.addEventListener('click', () => {
     window.scrollTo({
@@ -64,6 +67,7 @@ navBtn2.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
 })
 navBtn3.addEventListener('click', () => {
     window.scrollTo({
@@ -71,4 +75,5 @@ navBtn3.addEventListener('click', () => {
     })
     navSection.classList.add('hidden');  
     navSection.classList.remove('viewded');
+    navButton.style.transform = 'rotate(0deg)'; 
 })
