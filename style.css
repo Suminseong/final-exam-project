@@ -185,6 +185,10 @@ body {
     height: 60px;
 }
 
+#menu:hover {
+    cursor: pointer;
+}
+
 #left-text {
     display: flex;
     width: 200px;
