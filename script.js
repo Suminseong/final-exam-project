@@ -4,8 +4,17 @@ window.addEventListener('load', function () {
 
 let totalScroll = 0;
 
-//스로틀링과 섹션단위 횡스크롤 기본정보
+//어사이드 메뉴버튼 구현
+const navButton = document.getElementById('menu');
 
+navButton.addEventListener('click', function(){
+    const navSection = document.getElementById('left-nav');
+    navSection.classList.remove('hidden');
+    navSection.classList.add('viewded');
+})
+
+
+//스로틀링과 섹션단위 횡스크롤 기본정보
 let isThrottled = false;
 const sectionCount = document.querySelectorAll('.content-section-row-part').length;
 let currentSection = 0;

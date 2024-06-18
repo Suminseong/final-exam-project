@@ -14,6 +14,25 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+/*left navigation*/
+#left-nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #53AAE9;
+    z-index: 99999999; /*히히내가제일쎄!*/
+    transform: translateX(0vw);
+    transition: all 0.7s ease-in-out;
+}
+
+#left-nav.hidden {
+    transform: translateX(-100vw);
+    transition: all 0.7s ease-in-out;
+}
+/*left navigation end*/
+
 /*debugging*/
 .show-part1{
     transform: translateX(0vw);
