@@ -320,6 +320,7 @@ body {
     align-items: center;
     justify-content: space-between;
     right: 0%;
+    top: 0;
     margin-top: 45px;
     margin-right: 28px;
     width: 200px;
@@ -387,6 +388,7 @@ body {
     width: 320px;
     height: 80px;
     margin-top: 80px;
+    top: 0;
 }
 
 #section-1-text-black,
