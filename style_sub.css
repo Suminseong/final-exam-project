@@ -835,8 +835,9 @@ body {
     position: relative;
     width: 800px;
     height: 800px;
-    background-image: url(./img/sub_2_img.png);
-    background-size: contain;
+    background-image: url(./img/section-4-img-2.png);
+    background-size: cover;
+    background-position: center;
 }
 
 #sub-2-section-1-title-1-white {
@@ -1042,9 +1043,10 @@ body {
     position: absolute;
     width: 1200px;
     height: 800px;
-    background-image: url(./img/sub_3_img.png);
+    background-image: url(./img/section-4-img-3.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
     margin-top: 105px;
     left: 12.5vw;
 }
