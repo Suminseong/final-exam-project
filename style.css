@@ -675,6 +675,18 @@ body {
     background-color: #fff;
 }
 
+.btn-invisible {
+    opacity: 0;
+    transition: all 0.5s ease;
+    transition-delay: 0.5s;
+}
+
+.btn-visible {
+    opacity: 1;
+    transition: all 0.5s ease;
+    transition-delay: 0.5s;
+}
+
 #section-row-part-button p {
     font-size: 28px;
     font-weight: 700;
@@ -684,7 +696,7 @@ body {
 #section-row-part-1-button-div {
     display: flex;
     position: absolute;
-    justify-content: left;
+    justify-content: space-between;
     width: 800px;
     height: 60px;
     bottom: 30.5vh;
@@ -988,6 +1000,7 @@ body {
     justify-content: space-between;
     left: 160px;
     top: 5vh;
+    transition: transform 0.5s ease;
 }
 
 #section-2-row-part-1 {

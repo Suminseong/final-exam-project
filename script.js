@@ -4,6 +4,10 @@ window.addEventListener('load', function () {
 
 let totalScroll = 0;
 
+let isAnimated1 = false;
+let isAnimated2 = false;
+let isAnimated3 = false;
+
 //점차 증가하는 변수를 생성하는 함수 구문.
 function animateWidth(element, targetWidth) {
     let startWidth = 60;
@@ -28,6 +32,15 @@ function animateWidth(element, targetWidth) {
 const arrow1 = document.querySelector('#section-row-part-1-button-arrow-1 #arrow');
 const arrow2 = document.querySelector('#section-row-part-1-button-arrow-2 #arrow');
 
+const arrow3 = document.querySelector('#section-row-part-2-button-arrow-1 #arrow');
+const arrow4 = document.querySelector('#section-row-part-2-button-arrow-2 #arrow');
+
+const arrow5 = document.querySelector('#section-row-part-3-button-arrow-1 #arrow');
+
+const arrowButton1 = document.querySelector('.btn1');
+const arrowButton2 = document.querySelector('.btn2');
+const arrowButton3 = document.querySelector('.btn3');
+
 //어사이드 메뉴버튼 구현
 const navButton = document.getElementById('menu');
 
@@ -39,8 +52,24 @@ navButton.addEventListener('click', function () {
 
 //갤러리 작동. window 뷰포트 화면 이내에 들어왔을 때 클릭이벤트를 받아 실행 할 것
 const galleryContainer = document.getElementById('section-2-row-part-imgs');
-const galleryScrollBall = document.querySelectorAll('.row-part-current-bar');
 const galleryClickListner = document.getElementById('section-2-row-click-listner');
+const indicators = [
+    document.getElementById('current-1'),
+    document.getElementById('current-2'),
+    document.getElementById('current-3'),
+    document.getElementById('current-4')
+];
+
+function updateIndicators() {
+    indicators.forEach((indicator, index) => {
+        if (index === nowGallery) {
+            indicator.style.backgroundColor = '#53AAE9';
+        } else {
+            indicator.style.backgroundColor = '#d9d9d9';
+        }
+    });
+}
+
 let galleryWidth = galleryContainer.offsetWidth;
 let gallerySectionWidth = galleryWidth / 5;
 
@@ -56,6 +85,7 @@ galleryClickListner.addEventListener('click', function (e) {
         }
         galleryContainer.style.transform = `translateX(-${gallerySectionWidth * nowGallery}px)`;
         console.log(`up`);
+        updateIndicators();
     } else {
         if (nowGallery === 0) {
             nowGallery = 0;
@@ -64,6 +94,7 @@ galleryClickListner.addEventListener('click', function (e) {
         }
         galleryContainer.style.transform = `translateX(-${gallerySectionWidth * nowGallery}px)`;
         console.log(`down`);
+        updateIndicators();
     }
 });
 
@@ -204,19 +235,41 @@ window.addEventListener('scroll', function () {
             horizonalContents.style.transform = `translateX(-${0}vw)`
             window.scrollTo(0, scrollTop);//스로틀링 후 스크롤 정렬
             setTimeout(() => {
-                animateWidth(arrow1, 240);
-                animateWidth(arrow2, 120);
+                if (!isAnimated1) {
+                    isAnimated1 = true; // 플래그 변수를 true로 설정하여 애니메이션이 한 번만 실행되도록 함
+                    animateWidth(arrow1, 240);
+                    animateWidth(arrow2, 120);
+                    arrowButton1.classList.add('btn-visible');
+                    arrowButton1.classList.remove('btn-invisible');
+                }
             }, 1000);
         }
         else if (scrollTop > 6886 && scrollTop < 7452) {
             animateHorizontalScroll('show-part2', ['show-part1', 'show-part3']);
             horizonalContents.style.transform = `translateX(-${100}vw)`
             window.scrollTo(0, scrollTop);//스로틀링 후 스크롤 정렬
+            setTimeout(() => {
+                if (!isAnimated2) {
+                    isAnimated2 = true; // 플래그 변수를 true로 설정하여 애니메이션이 한 번만 실행되도록 함
+                    animateWidth(arrow3, 1280);
+                    animateWidth(arrow4, 120);
+                    arrowButton2.classList.add('btn-visible');
+                    arrowButton2.classList.remove('btn-invisible');
+                }
+            }, 900);
         }
         else if (scrollTop > 7452 && scrollTop < 8120) {
             animateHorizontalScroll('show-part3', ['show-part1', 'show-part2']);
             horizonalContents.style.transform = `translateX(-${200}vw)`
             window.scrollTo(0, scrollTop);//스로틀링 후 스크롤 정렬
+            setTimeout(() => {
+                if (!isAnimated3) {
+                    isAnimated3 = true; // 플래그 변수를 true로 설정하여 애니메이션이 한 번만 실행되도록 함
+                    animateWidth(arrow5, 1280);
+                    arrowButton3.classList.add('btn-visible');
+                    arrowButton3.classList.remove('btn-invisible');
+                }
+            }, 900);
         }
 
         if (progressBarWidth < vhCorrectionVal) { //횡스크롤에서 빠져나가기
