@@ -142,7 +142,7 @@ body::-webkit-scrollbar {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .show-part1{
@@ -164,6 +164,7 @@ body::-webkit-scrollbar {
     height: 100vh;
     transition: all 1s ease;
     transform: translateY(0);
+    z-index: 999;
 }
 
 .row-content-cover {
@@ -779,6 +780,11 @@ body {
     height: 60px;
     border-radius: 30px;
     background-color: #fff;
+    z-index: 999;
+}
+
+#section-row-part-button:hover {
+    cursor: pointer;
 }
 
 .btn-invisible {
