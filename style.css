@@ -34,6 +34,15 @@ body::-webkit-scrollbar {
 /*left navigation end*/
 
 /*debugging*/
+#section-2-row-click-listner {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
 .show-part1{
     transform: translateX(0vw);
     transition: all 1s;

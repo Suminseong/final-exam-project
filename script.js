@@ -13,6 +13,42 @@ navButton.addEventListener('click', function () {
     navSection.classList.add('viewded');
 })
 
+//갤러리 작동. window 뷰포트 화면 이내에 들어왔을 때 클릭이벤트를 받아 실행 할 것
+const galleryContainer = document.getElementById('section-2-row-part-imgs');
+const galleryScrollBall = document.querySelectorAll('.row-part-current-bar');
+const galleryClickListner = document.getElementById('section-2-row-click-listner');
+let galleryWidth = galleryContainer.offsetWidth;
+let gallerySectionWidth = galleryWidth / 5;
+
+let halfValue = galleryClickListner.offsetWidth / 2;
+let nowGallery = 0;
+
+console.log(galleryClickListner); // 디버깅: 클릭 리스너가 올바르게 선택되었는지 확인
+console.log(`halfValue: ${halfValue}`); // 디버깅: halfValue 값 확인
+
+galleryClickListner.addEventListener('click', function (e) {
+    console.log(`click detected at offsetX: ${e.offsetX}`); // 디버깅: 클릭 위치 확인
+    console.log(`nowGallery is ${nowGallery}`);
+
+    if (e.offsetX > halfValue) {
+        if (nowGallery === 3) {
+            nowGallery = 3;
+        } else {
+            nowGallery++;
+        }
+        galleryContainer.style.transform = `translateX(-${gallerySectionWidth * nowGallery}px)`;
+        console.log(`up`);
+    } else {
+        if (nowGallery === 0) {
+            nowGallery = 0;
+        } else {
+            nowGallery--;
+        }
+        galleryContainer.style.transform = `translateX(-${gallerySectionWidth * nowGallery}px)`;
+        console.log(`down`);
+    }
+});
+
 
 //스로틀링과 섹션단위 횡스크롤 기본정보
 const horizonalContents = document.querySelector('.row-content');
@@ -147,10 +183,10 @@ window.addEventListener('scroll', function () {
     else if (scrollTop > 8120) {
         horizonalContents.style.transform = `translate(-${200}vw, -${100}vw)`;
     }
-    else if(scrollTop <6420) {
+    else if (scrollTop < 6420) {
         horizonalContents.style.transform = `translate(-${0}vw, ${100}vw)`;
     }
-    
+
 });
 
 function animateHorizontalScroll(addClass, removeClasses) {
